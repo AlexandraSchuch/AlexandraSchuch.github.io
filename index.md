@@ -2,20 +2,18 @@
 layout: default
 ---
 
-Text can be **bold**, _italic_, ~~strikethrough~~ or `keyword`.
-
 
 ![Octocat](https://github.githubassets.com/images/icons/emoji/octocat.png)
+
 
 # About Me
 
 > I am a recent BAS Cybersecurity Graduate.
->
-> 
+> hdfgh
+> dghfg
 
+## Projects 
 
-
-## Projects
 [Link to another page](./another-page.html).
 
 
