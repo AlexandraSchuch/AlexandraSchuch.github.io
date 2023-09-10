@@ -12,8 +12,8 @@ layout: default
 > hdfgh
 > dghfg
 
-## Projects 
 
+## Projects 
 [Link to another page](./another-page.html).
 
 
