@@ -4,7 +4,7 @@ layout: default
 
 
 ![Octocat](https://github.githubassets.com/images/icons/emoji/octocat.png)
-
+<img src="smiley.gif" alt="Smiley face" width="42" height="42" style="vertical-align:middle">
 
 # About Me
 
