@@ -14,7 +14,7 @@ layout: default
 
 
 ## Projects 
-[Link to another page](./another-page.html).
+*   [Link to another page](./another-page.html).
 
 
 ### Header 3
@@ -61,7 +61,7 @@ end
 
 ### Here is an unordered list:
 
-*   Item foo
+*Item foo
 *   Item bar
 *   Item baz
 *   Item zip
