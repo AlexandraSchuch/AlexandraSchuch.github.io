@@ -3,8 +3,7 @@ layout: default
 ---
 
 
-![Octocat](https://github.githubassets.com/images/icons/emoji/octocat.png)
-<img src="smiley.gif" alt="Smiley face" width="42" height="42" style="vertical-align:middle">
+![Me](https://github.com/AlexandraSchuch/AlexandraSchuch/assets/144488134/1f28db47-2fb8-47bf-8d7e-7fd8aeda8a90) 
 
 # About Me
 
