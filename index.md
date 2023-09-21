@@ -14,7 +14,7 @@ layout: default
 
 ## Projects 
 *   [Link to another page](./another-page.html).
-*   [To Be Added]([test.docx](https://github.com/AlexandraSchuch/AlexandraSchuch/files/12678907/test.docx)
+*   [To Be Added](/test.md)
 *   [To Be Added](https://url)
 *   [To Be Added](https://url)
 
