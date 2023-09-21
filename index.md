@@ -14,7 +14,7 @@ layout: default
 
 ## Projects 
 *   [Link to another page](./another-page.html).
-*   [To Be Added](/Project1.md)
+*   [To Be Added](/project1.md)
 *   [To Be Added](https://url)
 *   [To Be Added](https://url)
 
