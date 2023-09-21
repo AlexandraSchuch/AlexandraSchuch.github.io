@@ -7,7 +7,7 @@ layout: default
 
 # About Me
 
-> I am a recent BAS Cybersecurity Graduate.
+> I am a passionate, driven, and detail-oriented cybersecurity graduate with a curious mindset that is continuously expanding my knowledge and skills through various projects/labs and certifications.
 > 
 > 
 
