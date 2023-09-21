@@ -19,6 +19,12 @@ layout: default
 *   [To Be Added](https://url)
 
 
+## Certifications/Certificates
+
+<img align="left" width="200px" src="https://images.credly.com/images/0bf0f2da-a699-4c82-82e2-56dcf1f2e1c7/image.png" />
+
+
+
 ### Connect with me
 
 [<img align="left" alt="AlexandraSchuch | LinkedIn" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg" />][linkedin]
