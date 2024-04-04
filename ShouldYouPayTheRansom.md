@@ -2,7 +2,7 @@
 layout: default
 ---
 
-## Welcome to another page
+## Should You Pay The Ransom?
 
 _yay_
 
