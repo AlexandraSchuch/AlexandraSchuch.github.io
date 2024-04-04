@@ -10,7 +10,9 @@ Currently no law exists in the US to ban victims from paying ransoms in a ransom
  
 “Federal agencies and industry analysts agree that paying the ransom does more harm than good to the entire industry. While paying may appear to be a viable option, here is why your business shouldn't: It encourages attackers, it escalates payments, data isn’t always returned, and potential future legal issues” (Johnson, 2021). By paying the ransom, you not only are funding criminal activity and enticing the attacker to continue to do it more, but you are also putting a target on your company to be an easy target because you paid. Why wouldn’t anyone take an opportunity to do something if they saw it was successful the first time and it made them money at the same time? Attackers have become even more greedy because they’ve seen how effective ransomware is, that even after companies pay one payment to receive the decryption key, some have taken it a step further and demanded a second payment to guarantee that none of the victim’s data will not be released. Until the attack is no longer effective or making money, ransomware will continue to thrive and evolve. By not paying, you put everyone one step closer to stopping or slowing down attacks and forcing attackers to change their strategies. Even though it is not currently illegal to pay ransom, in the future “Being involved in ransomware payments -- whether as the victim, a cyber insurance firm or financial institution -- the advisory said, could potentially violate Office of Foreign Assets Control regulations” (Johnson, 2021). Lastly, even if the victim does pay the ransom, it still isn’t guaranteed that the victim will receive a decryption key to get their data back. The attacker could essentially take the money and run.  
 When it comes to whether or not to pay the ransom, I feel it is not that black and white. Each incident is independent and unique from one another and how prepared the victim is before the attack can help really influence the overall decision especially having an offline backup but even then, sometimes these things fail, or other factors can play a bigger role in whether to pay ransom. If a company is small, they may not be able to even afford to pay the ransom. While if a company is big, they may still pay the ransom secretly and remain silent about the attack so as not to destroy their public image, recover critical assets, and have minimum downtime. However, if I had to pick one over the other, I would say not to pay the ransom. In my opinion, there are a lot of risks in paying the ransom that for the most part outweigh the positives. Even if a company feels that they have no other option, it is still very risky. They could lose all their data, money, trust, face future legal issues, and more. Everything lies in the faith of the attacker to honor the agreement. “According to a 2021 Sophos report, 92% of organizations don't get all their data back. Only 29% of those organizations that paid recovered even half the encrypted data” (Johnson, 2021). Even though organizations can never be 100% protected from attacks, that doesn’t mean they shouldn’t put forth their best efforts to do so. At the moment, “one of the key ways to defend against ransomware is to have a disaster recovery plan in place so that the system software and configuration can be completely reloaded...” but also “keep up-to-date configuration backups, and keep a copy remote or on a device that is physically separate so a ransomware attack on the control system cannot propagate to all the backups. Physical and virtual separation of a set of backups is the greatest defense against ransomware. This applies to historical data as well, so that past operating data is not lost. There will always be some risk of losing your most recent information but have a plan to do routine backups as practical” (Labs, 2020).  
-Ransomware Response Guide - Assume that a medium-sized company has been hit by ransomware and is unable to operate.  They have reached out to you for recommendations as to how to proceed. Actions they should take are: 
+Ransomware Response Guide - Assume that a medium-sized company has been hit by ransomware and is unable to operate.  They have reached out to you for recommendations as to how to proceed. 
+
+#### Actions they should take are: 
  
 -	Isolate the infected systems immediately (whether they are wired, wireless or mobile phones).  
 -	Consider turning off Wi-Fi and disabling any core network connections.  
@@ -22,19 +24,20 @@ Ransomware Response Guide - Assume that a medium-sized company has been hit by r
 -	Securely collect partial portions of the infected data/ make backup of infected systems. 
 -	Reset credentials for administrative and other system accounts. 
 -	Safely wipe the infected systems and reinstall the OS. 
--	IF backup is free of malware, then use it to restore devices.  
+
+#### IF backup is free of malware, then use it to restore devices.  
 -	Connect devices to clean network. 
 -	Download, install and update the OS and all other software. 
 -	Run antivirus.  
 -	Reconnect network. 
 -	Monitor network traffic.  
 -	Run antivirus scans to determine if infection remains.  
--	IF the backup is infected, then attempt to use various ransomware decryption tools to unlock files. If one tool doesn’t work, then restore the backup of the infected version, and repeat the process or try another tool.  
+#### IF the backup is infected, then attempt to use various ransomware decryption tools to unlock files. If one tool doesn’t work, then restore the backup of the infected version, and repeat the process or try another tool.  
 -	Consider doing a memory dump to determine how files are being encrypted. 
 -	Upload ransom note/sample encrypted file to an online ransomware identification tool to determine strain. 
 -	Consider upgrading security systems to avoid future attacks. 
- 
-If all possible options have been exhausted and the company has decided to pay the ransom: 
+
+#### If all possible options have been exhausted and the company has decided to pay the ransom: 
 
 - Hire a ransomware negotiator.
 -	Listen to the negotiator.  
