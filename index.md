@@ -21,7 +21,7 @@ layout: default
 > - Get my first cybersecurity job
 
 ## Blog Posts
- [Should You Pay The Ransom?](./ShouldYouPayTheRansom.md).
+* [Should You Pay The Ransom?](./ShouldYouPayTheRansom.md)
 
 
 ## Projects 
