@@ -17,8 +17,8 @@ layout: default
 > - I am doing the SOC lv 1 path on TryHackMe. 
 > 
 ><h3>Goals:</h3>
-> - <s> Get Security+ Certified</s> <br>
-> - Get my first cybersecurity job
+> - <s> Get Security+ Certified</s> 
+><br> - Get my first cybersecurity job
 
 ## Blog Posts
 * [Should You Pay The Ransom?](./ShouldYouPayTheRansom.md)
