@@ -7,7 +7,7 @@ layout: default
 
 # About Me
 
-> I am a passionate, driven, and detail-oriented cybersecurity graduate with a curious mindset that is continuously expanding my knowledge and skills through various projects/labs and certifications. I am a proud >member of a local cybersecurity organization called "The Neon Temple," where I attend weekly meetings learning and interacting with other cybersecurity professionals. I made this site to keep track of my progress >and post cool resources I find throughout my journey to land my first Cybersecurity job.
+> I am a passionate, driven, and detail-oriented cybersecurity graduate with a curious mindset that is continuously expanding my knowledge and skills through various projects/labs and certifications. I am a proud member of a local cybersecurity organization called "The Neon Temple," where I attend weekly meetings learning and interacting with other cybersecurity professionals. I made this site to keep track of my progress  and post cool resources I find throughout my journey to land my first Cybersecurity job.
 
 <center> <img alt="Neon Temple" src= "https://media-exp1.licdn.com/dms/image/C560BAQHyL7HcHbofiA/company-logo_200_200/0/1616878791819?e=2159024400&v=beta&t=oIa3_r_QDzgMvKNLIN2PAZn0kw_yQu72eirK99-ANmw"> </center>
  
