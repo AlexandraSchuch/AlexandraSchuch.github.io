@@ -34,7 +34,7 @@ layout: default
 *   [To Be Added](https://url)
 
 ## Resources
-*   [YouTube Cybersecurity Playlist](https://youtube.com/playlist?list=PLqkYTHb2aR1qGf4GuZyWPs8FG5cdehMo5&si=NAYQIY7YL45cQ1e0)
+*   [YouTube Cybersecurity Channel List](/YoutubeCyberList.md)
 *   [To Be Added](https://url)
 
 ### Certifications/Certificates
