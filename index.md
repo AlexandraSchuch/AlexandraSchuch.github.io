@@ -14,7 +14,7 @@ layout: default
 
 
 ## Projects 
-*   [Link to another page](./ShouldYouPayTheRansom.html).
+*   [Link to another page](./ShouldYouPayTheRansom.md).
 *   [To Be Added](/project1.md)
 *   [To Be Added](https://url)
 *   [To Be Added](https://url)
