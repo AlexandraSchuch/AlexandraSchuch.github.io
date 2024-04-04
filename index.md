@@ -10,15 +10,15 @@ layout: default
 > I am a passionate, driven, and detail-oriented cybersecurity graduate with a curious mindset that is continuously expanding my knowledge and skills through various projects/labs and certifications.
 >
 ><h3> Recently: </h3>
-> - Became Security+ Certified 
-> -I worked through the CISCO Network Academy "Basic Networking" course to improve my networking knowledge and skills.
-> -Played around with CISCO Packet Tracer
+> - Became Security+ Certified <br>
+> - I worked through the CISCO Network Academy "Basic Networking" course to improve my networking knowledge and skills. <br>
+> - Played around with CISCO Packet Tracer <br>
 ><h3> Currently: </h3>
->  I am doing the SOC lv 1 path on TryHackMe. 
+> - I am doing the SOC lv 1 path on TryHackMe. 
 > 
 ><h3>Goals:</h3>
 ><s> -Get Security+ Certified</s> <br>
-> -Get my first cybersecurity job
+> - Get my first cybersecurity job
 
 ## Blog Posts
  [Should You Pay The Ransom?](./ShouldYouPayTheRansom.md).
