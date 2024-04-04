@@ -2,7 +2,7 @@
 layout: default
 ---
 
-<center>
+
 ![Me](https://github.com/AlexandraSchuch/AlexandraSchuch/assets/144488134/1f28db47-2fb8-47bf-8d7e-7fd8aeda8a90) </center>
 
 # About Me
