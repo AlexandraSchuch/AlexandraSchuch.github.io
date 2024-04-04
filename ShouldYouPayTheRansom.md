@@ -25,7 +25,7 @@ Ransomware Response Guide - Assume that a medium-sized company has been hit by r
 -	Reset credentials for administrative and other system accounts. 
 -	Safely wipe the infected systems and reinstall the OS. 
 
-#### IF backup is free of malware, then use it to restore devices.  
+#### <b> IF backup is free of malware, then use it to restore devices. </b>
 -	Connect devices to clean network. 
 -	Download, install and update the OS and all other software. 
 -	Run antivirus.  
@@ -53,13 +53,18 @@ Ransomware Response Guide - Assume that a medium-sized company has been hit by r
 
 <h2> References </h2>
 
-- Johnson, Kyle. “Should Companies Pay after Ransomware Attacks? Is It Illegal?” Security, TechTarget, 20 Sept. 2021, https://www.techtarget.com/searchsecurity/tip/Should-companies-pay-ransomware-and-is-it-illegal-to. 
-- Labs, W. (2020, October). CYBERSECURITY Can you afford a RANSOMWARE attack? An attack not only creates costly downtime but also can destroy IP, cause food safety issues and just be plain expensive--whether or not you pay the ransom. Food Engineering, 92(10), 56+. https://link.gale.com/apps/doc/A692505273/AONE?u=lincclin_spjc&sid=bookmark-AONE&xid=40a275d5  
+-  Johnson, Kyle. “Should Companies Pay after Ransomware Attacks? Is It Illegal?” Security, TechTarget, 20 Sept. 2021, https://www.techtarget.com/searchsecurity/tip/Should-companies-pay-ransomware-and-is-it-illegal-to.
+</br> <br>
+- Labs, W. (2020, October). CYBERSECURITY Can you afford a RANSOMWARE attack? An attack not only creates costly downtime but also can destroy IP, cause food safety issues and just be plain expensive--whether or not you pay the ransom. Food Engineering, 92(10), 56+. https://link.gale.com/apps/doc/A692505273/AONE?u=lincclin_spjc&sid=bookmark-AONE&xid=40a275d5
+</br>  <br>
 - Murphy, Danny. “How to React to Ransomware Attack in 8 Steps.” Lepide Blog: A Guide to IT Security, Compliance and IT Operations, 27 July 2022, https://www.lepide.com/blog/how-to-react-to-ransomware-attack-in-8-steps/. 
-- NCSC. “Mitigating Malware and Ransomware Attacks.” NCSC, https://www.ncsc.gov.uk/guidance/mitigating-malware-and-ransomware-attacks. 
+- NCSC. “Mitigating Malware and Ransomware Attacks.” NCSC, https://www.ncsc.gov.uk/guidance/mitigating-malware-and-ransomware-attacks.
+</br>  <br>
 - Olenick. (2019). RANSOMWARE TO PAY OR NOT TO PAY. SC Magazine, 30(5), 10–15. 
-Protecting Your Networks from What Is Ransomware Ransomware? https://www.justice.gov/criminal-ccips/file/872771/download. 
-- Rempel. (2022). To Pay or Not to Pay: RANSOMWARE ATTACKS Offer an Unsavory Choice. Illinois Banker, 107(2), 18–. 
+Protecting Your Networks from What Is Ransomware Ransomware? https://www.justice.gov/criminal-ccips/file/872771/download.
+</br>  <br>
+- Rempel. (2022). To Pay or Not to Pay: RANSOMWARE ATTACKS Offer an Unsavory Choice. Illinois Banker, 107(2), 18–.
+</br>  <br>
 - “Should We Pay the Ransom - the Most Common Ransomware Question.” Ransomware.org, 2 Nov. 2021, https://ransomware.org/why-should-we-pay-the-ransom/. 
 
 
