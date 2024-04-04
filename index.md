@@ -18,7 +18,7 @@ layout: default
 > 
 ><h3>Goals:</h3>
 > - <s> Get Security+ Certified</s> 
-><br> - Get my first cybersecurity job
+> - Get my first cybersecurity job
 
 ## Blog Posts
 * [Should You Pay The Ransom?](./ShouldYouPayTheRansom.md)
