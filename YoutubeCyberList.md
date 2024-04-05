@@ -49,8 +49,6 @@ This is a list with links to various Cybersecurity/Tech channels i've come acros
 * [SANS DFIR](https://www.youtube.com/@SANSForensics)
 * [UnixGuy](https://www.youtube.com/@UnixGuy)
 * [Vincent Humble](https://www.youtube.com/@vincenthumble)
-* [here](here)
-* [here](here)
 
 
 [back](./)
