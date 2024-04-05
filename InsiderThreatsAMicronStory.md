@@ -4,3 +4,5 @@ Micron Technology is an American company best known for its production of comput
  <h2>References</h2>
 
  McLaughlin, D., & Strohm, C. (2018, November 2). China-owned company charged with stealing trade secrets from Boise-based Micron. The Seattle Times. https://www.seattletimes.com/business/china-state-owned-company-charged-with-stealing-trade-secrets-from-boise-based-micron/ <br>
+
+41 insider threat statistics you should care about. Swiss Cyber Institute. (2021, December 18). https://swisscyberinstitute.com/blog/41-insider-threat-statistics-you-should-care-about/
