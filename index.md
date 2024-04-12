@@ -24,6 +24,7 @@ layout: default
 
 
 ## Blog Posts
+* [Core Windows Processes](./Core_Windows_Processes.md)
 * [Should You Pay The Ransom?](./ShouldYouPayTheRansom.md)
 * [Insider Threats- A Micron Story](/InsiderThreatsAMicronStory.md)
 
