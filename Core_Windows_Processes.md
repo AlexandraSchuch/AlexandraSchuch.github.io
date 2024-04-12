@@ -1,6 +1,7 @@
 How can we know what is bad running processes on our Window systems if we don't recognize what is good running processes?
 
 Today we explore the world of *core processes within a Windows system.* with the "Core Windows Processes" module on TryHackMe. 
+
 ![OGC](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/5df56f45-ba97-4ea8-9ac8-4a1e434b7606)
 
 Fun fact: The Windows operating system is the most used in the world. Although i'm sure you could have guessed this. 
@@ -36,6 +37,7 @@ Here we have the "properties" of the "System" process through Process Explorer
 ![Pasted image 20240412182840](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/36e19bb2-ada5-4a48-aea6-a0515c6f1f83)
 
 As you can see, it doesn't give us much. In contrast, if we look at the "Properties" of the "System" process through Process Hacker we get this.
+
 ![Pasted image 20240412184909](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/4a9a71f1-9072-4f54-bbc2-35f09e44c3b3)
 
 which gives us more information. We now can see that the Parent of System is System Idle Process (0), the image path is C:\Windows\system32\ntoskrnl.exe (NT OS Kernel), and it also show us this is verified to be Microsoft Windows.
