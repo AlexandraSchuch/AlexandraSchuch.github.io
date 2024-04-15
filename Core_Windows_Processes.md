@@ -91,6 +91,7 @@ If you're still reading, then our second Windows process I will talk about is "s
   - creates a lot of child processes 
 
  As the name would imply, *Windows Session Manager (smss.exe)* is responsible for... well creating new sessions. Wow amazing stuff! 
+ 
 ![tenor](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/e43955c0-96d9-458e-ac0f-2caa60c20fe1)
 
 Anyways... this one is not so obvious. It's the first user mode process started by the kernel during the boot up process. 
