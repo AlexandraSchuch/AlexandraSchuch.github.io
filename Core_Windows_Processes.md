@@ -77,6 +77,7 @@ Some unusual behavior we want to look out for when it comes to the "System" proc
 - Multiple instances of System. (Should only be one instance) 
 - A different PID. (Remember that the PID will always be PID 4)
 - Not running in Session 0
+
 ***
 ## smss.exe (Sesson Manager Subsystem)
 
