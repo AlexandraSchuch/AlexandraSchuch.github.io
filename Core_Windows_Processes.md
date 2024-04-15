@@ -15,6 +15,7 @@ Long ago in a galaxy far far away... it used to be enough to have just antivirus
 Let's now go back to our original question, "How can we know what is bad running processes on our Windows systems if we don't recognize good running processes?"
 
 You'll soon learn that Windows has a lot of processes.
+
 ![Pasted image 20240413204215](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/394f3090-1b2d-41a8-919a-e927ab190e7b)
 
 Here is a rundown of the hierarchy of Windows Core Processes. I will cover all of these, starting from the top with "system" and working my way down the chain.
