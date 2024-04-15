@@ -228,7 +228,7 @@ Some unusual behavior we want to look out for when it comes to the "services.exe
 
 ## svchost.exe (Host Process for Windows Services)
 
-![[Pasted image 20240413211757.png]]
+![Pasted image 20240413211757](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/93cde02d-f308-4041-8e05-dc913842c7eb)
 
 We're more than halfway there! Now I will cover the sixth process, *svchost.exe*
 
@@ -239,40 +239,48 @@ We're more than halfway there! Now I will cover the sixth process, *svchost.exe*
   - Where the DLL processes are stored
 
 So here's something you probably don't know but service host (*svchost.exe*).... hosts services. yayyy! 
-![[dogecoin-gif-3.gif]]
+
+![dogecoin-gif-3](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/84dfdf27-948a-48ca-98a1-d0b4a3059415)
+
 ...and it manages them too! 
 
 ![[Pasted image 20240414125309.png]]
 
 Services running in this process are implemented as DLLS and stored in the registry for the service under the "Parameters" subkey in "ServiceDLL."
-![[Pasted image 20240414133036.png]]
+![Pasted image 20240414133036](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/ef7b834d-2b4a-49c2-9251-5b64b37bb855)
+
 
 Here's an example showing the "Service DLL" value for "Dcomlaunch" service.
-![[Pasted image 20240414133217.png]]
+
+![Pasted image 20240414133217](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/d84fac0a-aa65-4d89-852f-e79df96a77b5)
 
 If using "Process Hacker," you can access this info. by right clicking the *svchost.exe* process. 
-![[Pasted image 20240414133320.png]]
+
+![Pasted image 20240414133320](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/3eddcd0d-e709-4ff0-992b-a6ecdbf22506)
 
 then you right click the service column and select properties. Now you see the "Service DLL."
 
-![[Pasted image 20240414133517.png]]
+![Pasted image 20240414133517](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/11b91e84-6661-46ff-80d6-c9e184185d27)
 
 Now look at the binary Path in the above screenshot. After where you see *svchost.exe*, you'll notice "-k." This is important because it's a key identifier and groups similar services to share the same process. We want to see the "-k" when inspecting and determining if something is a legitimate *svchost.exe* process. If we don't see it, well....then it's SUS because this is an indicator of compromise.
-![[6dx215.gif]]
 
+![6dx215](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/ea6994bd-afa1-47cd-b3a8-d9371aee176d)
 
 Here we can see multiple services running with the same binary path as the "Dcomlaunch." All with the "-k" identifier.
-![[Pasted image 20240414134424.png]]
+
+![Pasted image 20240414134424](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/e5ec69f4-1f36-4ec5-a7da-cb9fdafa7ca0)
 
 However, where these services differ is in their "Service DLL" values. 
 
 For example, let's look at the properties of "LSM" and compare it with the properties of "Dcomlaunch."
 
 LSM 
-![[Pasted image 20240414135554.png]]
+
+![Pasted image 20240414135554](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/34d3243a-4518-4353-bc4c-0377162fe7f9)
 
 DCOM
-![[Pasted image 20240414135615.png]]
+
+![Pasted image 20240414135615](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/c5714268-3403-4286-9f89-505f9c9e6bd1)
 
 Notice the binary paths are the same, but the "Service DLL's" are different. 
 
