@@ -245,7 +245,7 @@ So here's something you probably don't know but service host (*svchost.exe*)....
 
 ...and it manages them too! 
 
-![[Pasted image 20240414125309.png]]
+![Pasted image 20240414125309](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/45bf1261-371f-46da-af08-5feb561f2e74)
 
 Services running in this process are implemented as DLLS and stored in the registry for the service under the "Parameters" subkey in "ServiceDLL."
 ![Pasted image 20240414133036](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/ef7b834d-2b4a-49c2-9251-5b64b37bb855)
