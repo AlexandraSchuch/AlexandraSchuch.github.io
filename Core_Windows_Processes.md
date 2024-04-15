@@ -213,6 +213,7 @@ It also maintains a database that can be queried by a OS native program called *
 ![Pasted image 20240414202902](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/0f27b362-5c36-4096-ac67-9177b8c21b11)
 
 And service.exe was like...
+
 ![Pasted image 20240413205056](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/a11ba94e-5b64-4723-a8ae-987aa6925111)
 
 Some unusual behavior we want to look out for when it comes to the "services.exe" process would be things such:
