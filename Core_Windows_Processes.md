@@ -190,7 +190,7 @@ BONUS- BSOD (Blue Screen of Death) demo
 ***
 ## services.exe ( SCM Service Control Manager)
 
-![[Pasted image 20240413201203.png]]
+![Pasted image 20240413201203](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/68bb8b03-a3ee-40e7-80cb-34283300b0dd)
 
 Alright! Time to talk about the fifth process, *services.exe*
 
@@ -199,18 +199,21 @@ Alright! Time to talk about the fifth process, *services.exe*
 - Only one instance
 
 *services.exe* primary job is to... handle services. Did you guess that one this time? 
-![[raw.gif]]
+
+![raw](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/1589c35b-0146-406c-81e8-88b52e08c79d)
 
 Anyways, it loads, interacts, starts, and ends services.
 
 It also maintains a database that can be queried by a OS native program called *sc.exe*
-![[1_QRDXuxOF9Yl0rrZUxY8_DA.webp]]
+
+![image](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/406e8cfc-3d55-4dd7-b361-ad70c2d4b6f3)
 
 *services.exe* has many child processes such as *svchost.exe*, *spoolsv.exe*, *msmpeng.exe*, and more. 
 
-![[1_3lIq9wD9tRdpT_pypzJ1uA.webp]]
+![Pasted image 20240414202902](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/0f27b362-5c36-4096-ac67-9177b8c21b11)
+
 And service.exe was like...
-![[Pasted image 20240413205056.jpg]]
+![Pasted image 20240413205056](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/a11ba94e-5b64-4723-a8ae-987aa6925111)
 
 Some unusual behavior we want to look out for when it comes to the "services.exe" process would be things such:
 
