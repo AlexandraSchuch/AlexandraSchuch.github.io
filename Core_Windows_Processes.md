@@ -160,7 +160,7 @@ Some unusual behavior we want to look out for when it comes to the "csrss.exe" p
 ***
 ## wininit.exe (Windows Initialization Process)
 
-![[Pasted image 20240413195009.png]]
+![Pasted image 20240413195009](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/6e1ce9ed-ae0d-46ef-bb90-e06a4aba2d03)
 
 ...and we continue with the fourth process I will be talking about, and that is *wininit.exe*
 
@@ -170,10 +170,11 @@ Some unusual behavior we want to look out for when it comes to the "csrss.exe" p
 
 *wininit.exe* launches three child process within session 0, which are *services.exe* (Service Control Manager), *lsass.exe* (Local Security Authority), and *lsaiso.exe*.
 
-![[Pasted image 20240413200435.png]]
+![Pasted image 20240413200435](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/9b58db5c-380c-45f5-a417-e843c75a8721)
 
 Notice you don't see *lsaiso.exe*, this is because this process is associated with **Credential Guard and KeyGuard**. You will only see this process if Credential Guard is enabled.
-![[Pasted image 20240413200656.png]]
+
+![Pasted image 20240413200656](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/20e9f771-894b-4916-a65d-6a9624bb7d52)
 
 Some unusual behavior we want to look out for when it comes to the "wininit.exe" process would be things such:
 
