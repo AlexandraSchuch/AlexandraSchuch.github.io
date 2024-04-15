@@ -5,7 +5,7 @@ layout: default
 
 ![Me](https://github.com/AlexandraSchuch/AlexandraSchuch/assets/144488134/1f28db47-2fb8-47bf-8d7e-7fd8aeda8a90) 
 
-# WhoAmI.exe
+# whoami.exe
 
 > I am a passionate, driven, and detail-oriented cybersecurity B.A.S graduate with a curious mindset that is continuously expanding my knowledge and skills through various projects/labs and certifications. I am a proud member of a local cybersecurity organization called "The Neon Temple," where I attend weekly meetings learning and interacting with other cybersecurity professionals. I made this site to keep track of my progress  and post cool resources I find throughout my journey to land my first Cybersecurity job.
 
