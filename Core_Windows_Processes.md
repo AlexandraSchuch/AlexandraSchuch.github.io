@@ -130,7 +130,7 @@ Some unusual behavior we want to look out for when it comes to the "smss.exe" pr
 ***
 ## csrss.exe (Client Server Runtime Process)
 
-![[Pasted image 20240413194640.png]]
+![Pasted image 20240413194640](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/0b1c1e26-c637-465a-862d-3b8efb1bd7fd)
 
 If you're still with me, then you've made it to the third process I will be talking about, and that is *csrss.exe*
 
@@ -140,7 +140,7 @@ If you're still with me, then you've made it to the third process I will be talk
 - If terminated, will result in system failure
 - Parent will be "non-existing process" (even though we know that it is spawned from smss.exe)
 
-![[Pasted image 20240413201554.jpg]]
+![Pasted image 20240413201554](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/85e093d8-4134-49b6-8219-04a0f58adefb)
 
 The *csrss.exe* process is also responsible for:
 
@@ -185,6 +185,7 @@ Some unusual behavior we want to look out for when it comes to the "wininit.exe"
 
 BONUS- BSOD (Blue Screen of Death) demo 
 [Power shell + wininit = BSOD (youtube.com)](https://www.youtube.com/watch?v=aYFvidT4o7g)
+
 ***
 ## services.exe ( SCM Service Control Manager)
 
