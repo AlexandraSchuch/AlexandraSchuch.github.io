@@ -370,7 +370,7 @@ Some unusual behavior we want to look out for when it comes to the "winlogon.exe
 
 ## explorer.exe (Windows Explorer)
 
-![[Pasted image 20240414180030.png]]
+![Pasted image 20240414180030](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/2f8cca45-7d42-489b-a929-160b4bb9002e)
 
 HOORAYY!! It's the last process! This is number nine, with the *explorer.exe* process.
 
@@ -381,7 +381,8 @@ HOORAYY!! It's the last process! This is number nine, with the *explorer.exe* pr
 The *explorer.exe* process gives users access to their folders and files but also provides functionality for features like the Start Menu and Taskbar. 
 
 Expect *explorer.exe* to have many child processes
-![[Pasted image 20240414181426.png]]
+
+![Pasted image 20240414181426](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/066a8514-d3e3-460b-89cd-a264f5dfcbe8)
 
 Some unusual behavior we want to look out for when it comes to the "explorer.exe" process would be things such:
 
@@ -393,7 +394,9 @@ Some unusual behavior we want to look out for when it comes to the "explorer.exe
 
 ***
 ## Conclusion
-![[raw 1.gif]]
+
+![raw 1](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/d147a997-b55a-48a8-9705-a20bc519711f)
+
 Congrats! You made it to the end! I know. I know. It was A LOT! However, I hope you learned a thing or two. It must have been interesting enough because you made it here.
 
 Personally, I found learning about the "Core Windows Processes" to be really interesting! That's most likely why I wrote so much. I feel a lot more comfortable opening up Task Manager and having a good idea of what's normal and what is not. I now know some of the indicators of compromise to look for, such as missing the "-k" identifier in the binary path of *svchost.exe* processes or looking for slightly misspelled core processes that is malware trying to disguise themselves.  
