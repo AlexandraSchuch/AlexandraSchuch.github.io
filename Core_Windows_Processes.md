@@ -297,7 +297,7 @@ Some unusual behavior we want to look out for when it comes to the "svchost.exe"
 
 ## lsass.exe (Local Security Authority Subsystem Service)
 
-![[Pasted image 20240414152200.png]]
+![Pasted image 20240414152200](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/71044379-f99e-4bc4-bb23-e6c267395897)
 
 We're getting to the end! Time to talk about the seventh process, *lsass.exe*
 
@@ -306,7 +306,9 @@ We're getting to the end! Time to talk about the seventh process, *lsass.exe*
   - One instance
 
 *lsass.exe* is the enforcer! 
-![[avatar-clint-eastwood-www.gifea.com.gif]]
+
+![avatar-clint-eastwood-www gifea com](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/9d524dd6-b2ff-49bb-a74c-bba9ea4b5745)
+
 It enforces security policies on Windows systems. 
 
 It does this by verifying user log ins on the system or server, handling password changes, and creating access tokens. It also writes to the Windows Security Log. 
@@ -316,7 +318,8 @@ It does this by verifying user log ins on the system or server, handling passwor
   - AD (Active Directory)
   - NETLOGON
 
-![[spiderman-animated-gif.webp]]
+![OGC](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/4d3c2db7-23bb-439e-9f81-50f35e35be9f)
+
 However with great power comes a great amount of adversaries looking to credential dump or create a fake version of the process. *lsass.exe* is targeted often by adversaries. 
 
 Some unusual behavior we want to look out for when it comes to the "lsass.exe" process would be things such:
@@ -331,23 +334,29 @@ Some unusual behavior we want to look out for when it comes to the "lsass.exe" p
 
 ## winlogon.exe (Windows Logon)
 
-![[Pasted image 20240414175942.png]]
+![Pasted image 20240414175942](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/4c00e490-4ca3-47b9-b601-1b95cfabfa93)
 
 Look at that! We're on the other side with session 1! Now we cover the eighth process, *winlogon.exe*. 
-![[Pasted image 20240414173204.jpg]]
+
+![Pasted image 20240414173204](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/ff9e37c0-1dcb-473a-85b5-079ef0775c60)
 
   - Can have one or more instances when new sessions are created (usually through Remote Desktop or Fast User Switching logons)
   - Parent is *smss.exe* so you should see "non-existing process" because *smss.exe* self-terminates
   - **Image Path**:  %SystemRoot%\System32\winlogon.exe
 
 *winlogon.exe* is responsible for handling the Secure Attention Sequence (SAS). SAS is better known as the Ctrl+Alt+Delete combo and serves a a safe checkpoint, in which any actions after invoking it will be genuine and secure.
-![[Pasted image 20240414173707.png]]
+
+![Pasted image 20240414173707](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/bd089a1d-3c50-4125-ac2a-5587a6ff894c)
+
 You can read more about it here:[Secure Attention Sequence (SAS) - NETWORK ENCYCLOPEDIA](https://networkencyclopedia.com/secure-attention-sequence-sas/)
 
 *winlogon.exe* is also responsible for loading user profiles but also locking the screen and running the user's screensaver. 
-![[Pasted image 20240414175844.png]]
+
+![Pasted image 20240414175844](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/956e2c5f-310b-46b9-a848-a906823c6019)
+
 It loads user's profiles by loading the user's "NTUSER.DAT" into HKCU, and userinit.exe then loads the user's shell.
-![[Pasted image 20240414174746.png]]
+
+![Pasted image 20240414174746](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/36fea8ad-6fcb-4756-a75b-1b14f8fbdf2a)
 
 Some unusual behavior we want to look out for when it comes to the "winlogon.exe" process would be things such:
 
