@@ -29,7 +29,7 @@ To better understand kernel mode vs user mode, here are some resources
 
 [User mode vs Kernel mode in operating system (youtube.com)](https://www.youtube.com/watch?v=KOC3CZNjyJ4)
 
-[What’s the Difference Between User and Kernel Modes? | Baeldung on Computer Science](https://www.baeldung.com/cs/user-kernel-modes)
+[What’s the Difference Between User and Kernel Modes?](https://www.baeldung.com/cs/user-kernel-modes)
 
 [Architecture of Windows NT - Wikipedia](https://en.wikipedia.org/wiki/Architecture_of_Windows_NT)
 
