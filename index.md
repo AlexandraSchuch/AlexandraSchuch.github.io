@@ -3,7 +3,7 @@ layout: default
 ---
 
 
-<img align="middle" src="https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/6847c55c-80f8-4238-8aa6-10639b72bc01" alt="myimage" />
+<center> <img alt="me" src= "https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/6847c55c-80f8-4238-8aa6-10639b72bc01"> </center>
  
 
 # whoami.exe
