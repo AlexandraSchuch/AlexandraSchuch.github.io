@@ -1,6 +1,7 @@
 # Verifying Checksums of Download Files
 
-### What is a checksum?
+## What is a checksum?
+
 A checksum is a unique fixed string that's generated through the combination of a hashing algorithm and data. In this case, a file is hashed to create a checksum. 
 
 ![Pasted image 20240416144120](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/a0dcd505-fbea-44ca-85eb-78fb29ae57b0)
@@ -12,6 +13,7 @@ If the file has altered in any way, then the hashes will not match.
 ![Pasted image 20240416144042](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/e577abc6-80a5-438b-bc74-7dd562a2b959)
 
 ***
+## Utilizing Checksum
 
 Using VirtualBox as an example
 
