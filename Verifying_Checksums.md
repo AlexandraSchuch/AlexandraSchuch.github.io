@@ -44,8 +44,13 @@ We then right click the downloads directory and open PowerShell
 
 ![Pasted image 20240415141606](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/f7c76147-0895-44f3-b3e1-03539cba18c8)
 
-Now we run the command _Get-FileHash .\VIRTUALBOX PATH_ 
-<br> in my case its was _Get-FileHash .\VirtualBox-7.0.14-161095-Win.exe_
+Now we run the command 
+<br>
+`Get-FileHash .\(VIRTUALBOX PATH)`
+<br> 
+In my case its was
+
+    Get-FileHash .\VirtualBox-7.0.14-161095-Win.exe
 
 ![Pasted image 20240415141902](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/12e85150-2041-49de-b64e-5cd12d621583)
 
