@@ -25,7 +25,7 @@ layout: default
 
 ## Blog Posts
 * [Core Windows Processes](./Core_Windows_Processes.md)
-* [Verifying Checksums of Download Files](./Verifying_Checksums.md)
+* [Verifying Checksums of Download Files](/Verifying_Checksums.md)
 * [Should You Pay The Ransom?](./ShouldYouPayTheRansom.md)
 * [Insider Threats- A Micron Story](/InsiderThreatsAMicronStory.md)
 
