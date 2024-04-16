@@ -50,6 +50,10 @@ Now we run the command
 <br> 
 In my case its was
 
+<pre><code class="language-python">
+dlfjlsdaf
+</code></pre>
+
     Get-FileHash .\VirtualBox-7.0.14-161095-Win.exe 
 
 ![Pasted image 20240415141902](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/12e85150-2041-49de-b64e-5cd12d621583)
