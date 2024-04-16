@@ -2,7 +2,8 @@
 layout: default
 ---
 
-![Me](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/5f37fbfa-1a8f-461a-ae0c-79b886a025fd)
+
+<img align="middle" src="https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/6847c55c-80f8-4238-8aa6-10639b72bc01" alt="myimage" />
  
 
 # whoami.exe
