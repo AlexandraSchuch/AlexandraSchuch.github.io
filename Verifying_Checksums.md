@@ -1,3 +1,5 @@
+# Verifying Checksums of Download Files
+
 ### What is a checksum?
 A checksum is a unique fixed string that's generated through the combination of a hashing algorithm and data. In this case, a file is hashed to create a checksum. 
 
