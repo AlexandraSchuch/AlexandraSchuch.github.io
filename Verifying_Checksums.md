@@ -50,7 +50,8 @@ Now we run the command
 <br> 
 In my case its was
 
-<pre id="myPreTag">This is some text.<br>This is some text.<br>This is some text.</pre>
+<pre><code class="language-css"> fldsjflsdjfl
+</code></pre>
 
     Get-FileHash .\VirtualBox-7.0.14-161095-Win.exe
 
