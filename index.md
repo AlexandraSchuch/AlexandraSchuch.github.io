@@ -2,8 +2,8 @@
 layout: default
 ---
 
-
-![Me](https://github.com/AlexandraSchuch/AlexandraSchuch/assets/144488134/1f28db47-2fb8-47bf-8d7e-7fd8aeda8a90) 
+![Me](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/5f37fbfa-1a8f-461a-ae0c-79b886a025fd)
+ 
 
 # whoami.exe
 
