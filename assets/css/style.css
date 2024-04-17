@@ -1,1 +1,35 @@
+/* Binary Background CSS */
+body {
+  background-color: black; /* Set the background color */
+  overflow: hidden; /* Hide any overflowing content */
+}
+
+/* Create the binary rain effect */
+.binary-rain {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none; /* Ignore mouse events */
+  z-index: -1; /* Place behind other content */
+}
+
+/* Individual binary raindrops */
+.binary-drop {
+  position: absolute;
+  font-size: 12px; /* Adjust font size as needed */
+  color: #00ff00; /* Green color for binary digits */
+  animation: binary-fall linear infinite; /* Animation for falling effect */
+}
+
+/* Keyframe animation for binary falling */
+@keyframes binary-fall {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(100vh);
+  }
+}
 
