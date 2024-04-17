@@ -16,11 +16,11 @@ If the file has altered in any way, then the hashes will not match.
 ***
 ## Utilizing Checksum
 
-Using VirtualBox as an example
+Using `VirtualBox` as an example
 
 ![Pasted image 20240415132701](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/5bd0831b-14f4-487c-8c80-6ca5c662c038)
 
-We Click Download
+We Click `Download`
 
 ![Pasted image 20240415132713](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/4712c857-e2f4-4ab8-abb5-7ec4ca285c6f)
 
@@ -28,7 +28,7 @@ We choose the operating system that pertains to us. In my case, it's a Windows O
 
 ![Pasted image 20240415132740](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/a9baf301-70b5-4e25-b346-a24fb3a36e25)
 
-While its downloading, lets open up the "SHA256 Checksums"
+While its downloading, lets open up the `"SHA256 Checksums"`
 
 ![Pasted image 20240415132805](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/ba6fec09-4631-4707-acca-fc7b1785e1fa)
 
@@ -36,23 +36,26 @@ We see this page, which lists all the SHA256 Checksums for all the different dow
 
 ![Pasted image 20240416142359](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/6d8b16c5-6a60-4a6a-9f34-77e01e54cf2f)
 
-We open our file explorer and head over to our downloads directory
+We open our `File Explorer` and head over to our downloads directory
 
 ![Pasted image 20240415135904](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/cbd5a8a1-f9e4-44a1-8047-51686c19a254)
 
-We then right click the downloads directory and open PowerShell
+We then right click the `Downloads Directory` and open `PowerShell`. It's important that we are in the right directory before running the next command, but there is more than one way to get there.
 
 ![Pasted image 20240415141606](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/f7c76147-0895-44f3-b3e1-03539cba18c8)
 
 Now we run the command 
-<br>
-`Get-FileHash .\(VIRTUALBOX PATH)`
-<br> 
-In my case its was
-
-```Powershell
-Get-FileHash .\VirtualBox-7.0.14-161095-Win.exe 
+<br> If you're on Windows, then you will use `PowerShell` with this command
+```PowerShell    
+    Get-FileHash .\(VIRTUALBOX PATH HERE)
 ```
+Or if you're on Linux, then you will use `Terminal` with this command 
+```Bash
+    sha256sum (VIRTUALBOX PATH HERE)
+```
+<br> 
+In my case its was through PowerShell
+
 ![Pasted image 20240415141902](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/12e85150-2041-49de-b64e-5cd12d621583)
 
 and our results are something like so, where we see the SHA256 of the VirtualBox file.
