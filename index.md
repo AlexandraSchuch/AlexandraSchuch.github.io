@@ -1,4 +1,6 @@
-<link rel="stylesheet" type="text/css" href="https://alexandraschuch.github.io/assets/css/style.css"> 
+---
+layout: default
+---
 
 
 <center> <img alt="me" src= "https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/6847c55c-80f8-4238-8aa6-10639b72bc01"> </center>
