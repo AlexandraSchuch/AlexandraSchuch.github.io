@@ -31,7 +31,7 @@ We will refer back to this diagram at any time during the project to avoid any c
 - [ ] Change all VM network's to NAT Network that you create to have all devices on same network with internet.
 - [ ] Make network diagram
 
-<br></br>
+<br>
 ### Setting up static IP address for Splunk Server
 ***
 As you can see our current IP address is `192.168.10.4` and we need to change that to match our diagram address of `192.168.10.10`
