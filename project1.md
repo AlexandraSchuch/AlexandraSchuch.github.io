@@ -321,8 +321,7 @@ We rename it to `target-PC` so that it makes things more simple to understand in
 
 Next, we want to search for `cmd` and see our current IP address by running the command
 
-```
-Command Prompt
+```Command Prompt
 ipconfig
 ```
 
