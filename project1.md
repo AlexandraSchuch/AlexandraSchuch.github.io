@@ -23,7 +23,7 @@ The Active Directory Lab project creates a controlled environment for simulating
 
 We will refer back to this diagram at any time during the project to avoid any confusion and keep track of all devices being used within the project and their respective IPs. 
 
-![[Active-Directory-Diagram7.png]]
+![Active-Directory-Diagram7](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/86b401f2-c979-4c51-8438-260b67aca06c)
 
 ### PRE-Project Checklist
 
@@ -35,17 +35,17 @@ We will refer back to this diagram at any time during the project to avoid any c
 ***
 As you can see our current IP address is `192.168.10.4` and we need to change that to match our diagram address of `192.168.10.10`
 
-![[Pasted image 20240420023738.png]]
+![Pasted image 20240420023738](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/cca71461-8681-4a33-ab71-6eb87401b10c)
 
 We need to go into the Network Config and change some things to make the IP address static so we run the command
 ```Splunk
 sudo nano /etc/netplan/00-installer-config.yaml
 ```
-
-![[Pasted image 20240420024317.png]]
+![Pasted image 20240420024317](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/15412bf3-a93d-412b-9339-c4031bd2b773)
 
 We are then present with this 
-![[Pasted image 20240417204446.png]]
+![Pasted image 20240417204446](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/c39106bb-1314-4511-965e-51f2c9c8f3c2)
+
 
 We edit the file to look like this and we save the changes. 
 ```yaml
@@ -61,7 +61,8 @@ network:
         via: 192.168.10.1
 version: 2
 ```
-![[Pasted image 20240420024606.png]]
+![Pasted image 20240420024606](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/d0e555de-7b5f-4ac1-9508-d3d633096a81)
+
 
 We apply the new Netplan so we have our static IP by using this command. We ignore the warning. It doesn't effect this. 
 
@@ -69,49 +70,59 @@ We apply the new Netplan so we have our static IP by using this command. We igno
 sudo netplan apply
 ```
 
-![[Pasted image 20240417205042.png]]
+![Pasted image 20240417205042](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/e2a55b0b-0ab8-4218-9339-c81d7bb15412)
+
 To check that the IP addresses has now changed to the static addresses we changed it to, we run this command.
 ```
 ip a
 ```
 we see that we were successful at changing the IP address because now it shows `192.168.10.10/24`
 
-![[Pasted image 20240417205134.png]]
+![Pasted image 20240417205134](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/06766005-fa5a-444a-97cd-69eb7952528c)
+
 
 We ping google.com to make sure we have a connection by doing the command
 ```
 ping google.com
 ```
-![[Pasted image 20240417205248.png]]
+![Pasted image 20240417205248](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/a4b64c12-1481-4506-b9d0-6d605e556a59)
+
 
 ### Install Splunk on HOST machine.
 
 We want to install `Splunk` on our HOST computer, so we will head over to `Splunk.com` on our browser through our HOST computer.
 
-![[Pasted image 20240501203059.png]]
+![Pasted image 20240501203059](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/97a6f497-05ba-4f0a-b5bd-3b80d4e56491)
+
 
 If you DO NOT have an account already then you want to click `Sign up`, otherwise `Log in`.
-![[Pasted image 20240501203133.png]]
+![Pasted image 20240501203133](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/eaa11c9b-ff79-4659-a218-ea93beeef94e)
+
 
 Once you're signed in, we will hover over `Products` and then click on `Free Trials & Downloads`
 
-![[Pasted image 20240501203314.png]]
+![Pasted image 20240501203314](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/9705e136-1682-4688-8447-39755874699e)
+
 
 Scroll down to `Splunk Enterprise` and click `Get My Free Trial`
 
-![[Pasted image 20240501203433.png]]
+![Pasted image 20240501203433](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/bce4ceaf-9a64-4f87-aa15-6a644b39429d)
+
 
 We want to make sure that we select `Linux` as our OS because our Splunk Server is a Ubuntu Server.
 
-![[Pasted image 20240501204255.png]]
+![Pasted image 20240501204255](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/9beea78e-3144-4c0d-92b0-4fdfb6ea9f02)
+
 
 We are interested in the `.deb` file. We will select `Download Now`.
 
-![[Pasted image 20240501204356.png]]
+![Pasted image 20240501204356](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/5267caa7-1976-4887-b3e9-b70a72c90363)
+
 
 We will save this in a directory of our choice. 
 
-![[Pasted image 20240501204501.png]]
+![Pasted image 20240501204501](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/ab14b587-8c92-45d7-9982-0884eb7461cc)
+
 
 ### Download guest add ons for VirtualBox
 ***
@@ -121,36 +132,48 @@ We want to download the `guest add ons` for VirtualBox
 sudo apt-get install virtualbox-guest-additions-iso
 ```
 
-![[Pasted image 20240420030616.png]]
+![Pasted image 20240420030616](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/09b54308-0194-4dd0-bdc8-750b673c3cc3)
+
 
 We will press `y` and `enter`. Then wait for everything to download.
 
-![[Pasted image 20240420030925.png]]
+![Pasted image 20240420030925](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/5274b6c9-b71e-44a8-b0a5-25965bd9c812)
+
 
 Once we see this screen, we press `enter` and our package should install.
 
-![[Pasted image 20240420031144.png]]
+![Pasted image 20240420031144](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/ef024ddd-3e4a-4ac6-bcb1-5fc290d4d009)
+
 
 Now we want to click `Devices` on our VM at the top 
-![[Pasted image 20240420031415.png]]
+
+![Pasted image 20240420031415](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/2bb6d884-ad8b-43f1-b6c1-75375b5fe334)
+
 
 We then want to go to `Shared Folders` and then to `Shared Folders Settings`
-![[Pasted image 20240420031556.png]]
+
+![Pasted image 20240420031556](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/1076f3c4-8669-4f67-bbf3-9834e9affb07)
 
 We are presented with this.
-![[Pasted image 20240420031705.png]]
+
+![Pasted image 20240420031705](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/abd42a38-30c0-470b-8738-162032ec6ad3)
+
 
 We want to add a new folder by clicking on this icon on the right hand side.
-![[Pasted image 20240420031748.png]]
+
+![Pasted image 20240420031748](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/0f462cdb-50d2-4c3f-8a48-3b49242cbc48)
+
 
 For folder path, we want to use the same folder where we saved the `Splunk .Deb package` for me it was in an `ActiveDirectoryProject` folder. We will also checkmark `Read-only`, `Auto-mount`, and `Make Permanent`. Then press `OK`  
-![[Pasted image 20240420032120.png]]
+
+![Pasted image 20240420032120](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/4141d990-14cd-4085-b267-308465575dd6)
 
 We then will reboot the VM running the command
 ```
 Sudo reboot
 ```
-![[Pasted image 20240420032337.png]]
+
+![Pasted image 20240420032337](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/c793dc52-b379-4763-818d-228a24766b9f)
 
 We relog back in.
 
@@ -159,15 +182,19 @@ Then we want to add our user to vboxsf. In my case it's `chum_bucket` by running
 sudo adduser chum_bucket vboxsf
 ```
 
-![[Pasted image 20240417211043.png]]
+![Pasted image 20240417211043](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/9ecf2244-adab-4b23-8612-9ff6cba8a7f1)
+
 If we get this 
-![[Pasted image 20240420033006.png]]
+
+![Pasted image 20240420033006](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/32dad1cc-d914-4f95-a734-aaabe9f48ec3)
+
 then we might need some additional guest installations for VirtualBox so we will get them by running the command 
 ```
 sudo apt-get install virtualbox-guest-utils
 ```
 
-![[Pasted image 20240420033336.png]]
+![Pasted image 20240420033336](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/50349245-628e-4c4b-b916-79c03862060b)
+
 We will reboot again and relog in. 
 ```
 sudo reboot
@@ -175,7 +202,7 @@ sudo reboot
 
 We will try again to add the user to the vboxsf and we see that it works.
 
-![[Pasted image 20240417211744.png]]
+![Pasted image 20240417211744](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/9d3a24e8-a3ff-454a-83ec-8e7ce099c269)
 
 We will make a new `directory` called `share` by running the command
 ```
@@ -183,7 +210,8 @@ mkdir share
 ```
 
 We will check to make sure that its there by running the `ls` command
-![[Pasted image 20240417211817.png]]
+
+![Pasted image 20240417211817](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/63ac6dad-4bd0-479c-9e68-2800af1551f8)
 
 Now that the `Share` directory has been made, we want to run the following command to mount our shared folder onto our share directory. 
 
@@ -192,7 +220,8 @@ NOTE: if we forget where the folder path is, then we can go back to the top and 
 ```
 sudo mount -t vboxsf -o uid=1000,gid=1000 ActiveDirectoryProject share/
 ```
-![[Pasted image 20240417212250.png]]
+![Pasted image 20240417212250](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/7a6ef735-1a58-4ba7-a520-a0f404c2be12)
+
 NOTE2: if we get an error when entering this command then exit and relog back in because when you add a user into a new group, it doesn't take effect until you log out. 
 
 We will run the command 
@@ -200,24 +229,26 @@ We will run the command
 ls -la
 ```
 and we see that `share` is now highlighted
-![[Pasted image 20240420035421.png]]
+
+![Pasted image 20240420035421](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/b2f0e97f-6a99-4197-85e1-0ee99d665361)
+
 we will change directories into `share` by running the command 
 ```
 cd share
 ```
-![[Pasted image 20240420035047.png]]
+![Pasted image 20240420035047](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/1409cd3a-1533-41b0-a111-5964107dc775)
+
 we will run the command again
 ```
 ls -la 
 ```
-![[Pasted image 20240420035331.png]]
+![Pasted image 20240420035331](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/e0592f11-b066-42bc-9e57-38bbd59ba286)
 
 We will then install `Splunk` by running the command
 ```
 sudo dpkg -i (splunk-9.2.1-.deb) 
 ```
-
-![[Pasted image 20240417212653.png]]
+![Pasted image 20240417212653](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/5a481bde-425d-44f3-8c23-d8d2ecddb083)
 
 Now we will change into the directory where `Splunk` is located on our server by running the command
 
@@ -228,7 +259,8 @@ and run the command to see all
 ```
 ls -la
 ```
-![[Pasted image 20240417212743.png]]
+![Pasted image 20240417212743](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/66e7f5ec-dc3a-455c-affb-b4236dde1156)
+
 and we notice that all the user and group belong to `splunk` which is good because it limits the permission to that user or group.
 
 We will change to the user `splunk` by running the command
@@ -241,18 +273,21 @@ cd bin
 ```
 NOTE: All the files in here are listed as the binaries that splunk can use.
 
-![[Pasted image 20240417212824.png]]
+![Pasted image 20240417212824](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/4c63a19a-c7e4-4270-af7f-2a284b275dc2)
+
 We will run this command to run `splunk`
 ```
 ./splunk start
 ```
-![[Pasted image 20240417212906.png]]
+![Pasted image 20240417212906](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/c5861190-52e6-4692-8458-6eaf0f605c5b)
+
 We will get a license and terms agreement. We will press `q` then `y` then `enter`. We then enter an admin name and password. 
 
-![[Pasted image 20240420041107.png]]
+![Pasted image 20240420041107](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/901d7f44-0783-4624-9582-8e62204fda44)
 
 Once installation is completed we see this.
-![[Pasted image 20240420041631.png]]
+
+![Pasted image 20240420041631](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/ad33337f-db64-492e-9e36-ae4743c18411)
 
 We will run one more command to make sure that `splunk` starts up every time our VM reboots.
 
@@ -272,86 +307,96 @@ and then run the command
 sudo ./splunk enable boot-start -user splunk
 ```
 This will make it so that anytime the VM reboots, `splunk` will run with the user `splunk`
-![[Pasted image 20240417213321.png]]
+
+![Pasted image 20240417213321](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/8c8cb525-74b6-448a-b5da-4ce6427253cb)
 
 #### Installing Splunk Universal Forwarder and Sysmon on Windows 10 AKA "Target PC"
 ***
 On Windows 10 machine, we search up `pc` and go into `Properties` -> `Rename this PC`. 
 
 We rename it to `target-PC` so that it makes things more simple to understand in the logs. We then reboot and check in the `pc` -> `Properties` again to verify the name has changed.
-![[Pasted image 20240417213836.png]]
+
+![Pasted image 20240417213836](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/b7d6d4f4-b6d4-42a2-8cf4-97dd0ea6d895)
 
 Next, we want to search for `cmd` and see our current IP address by running the command
 
 ```Command Prompt
 ipconfig
 ```
-![[Pasted image 20240420142237.png]]
+![Pasted image 20240420142237](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/447bdccb-69fc-4867-892b-6f2fb27332be)
 
 Right now the Windows 10 machine is getting assigned a dynamic IPv4 address through DHCP and we need to change it to the static address `192.168.10.100` to match our network diagram. 
 
-So, to do that we will right click the `network`![[Pasted image 20240420142636.png]] icon in the bottom right. Then click `Open Network & Internet settings` -> `Change adapter options`. Right click `Ethernet` -> `Properties` -> `Internet Protocol Version 4 (TCP/IPv4)` 
+So, to do that we will right click the `network`![Pasted image 20240420142636](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/ef7b470a-31d4-4d40-9c92-dd23e280798c)
+ icon in the bottom right. Then click `Open Network & Internet settings` -> `Change adapter options`. Right click `Ethernet` -> `Properties` -> `Internet Protocol Version 4 (TCP/IPv4)` 
 
-![[Pasted image 20240420142615.png]]
-![[Pasted image 20240420142839.png]]
-![[Pasted image 20240420143105.png]]
+![Pasted image 20240420142615](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/d9965ed5-47f3-4891-a6c8-1c7b59f6e8cd)
+
+![Pasted image 20240420142839](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/fe1405af-148c-4581-b4db-a036e09ce5f5)
+
+![Pasted image 20240420143105](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/decac03f-fd5f-4931-ae9b-7c02fdb9311a)
 
 We now will set our static IP with the configurations below
-![[Pasted image 20240417214706.png]]
+
+![Pasted image 20240417214706](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/e4a55a85-8696-4691-8039-a002534ee7f6)
 
 Then we run the `ipconfig` command again to verify that the IP address has changed to `192.168.10.100` and we see that it has.
 
-![[Pasted image 20240417215147.png]]
+![Pasted image 20240417215147](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/47bb5e54-2ad3-4d4e-9407-9fa69d8b2033)
 
 We will now open up a web browser and try accessing our `splunk` server by typing in its IP address that we statically assigned, followed by `:8000` as so, `192.168.10.10:8000` into the address bar. 
 
 NOTE: `Splunk` listens on port 8000 and that is why we specify it. Also make sure your `Splunk` server is powered on or else it won't work.
 
-![[Pasted image 20240420143848.png]]
+![Pasted image 20240420143848](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/2636a9e5-f696-49e1-aa74-db7eb8341e85)
 
 We see this screen and know that we can access `splunk`
-![[Pasted image 20240420144439.png]]
+
+![Pasted image 20240420144439](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/c1bdb360-03f4-4593-afae-23a68a68cb3e)
 
 Now we will install `Splunk Universal Forwarder` by heading to the `splunk.com` site and logging into our account. 
-![[Pasted image 20240420144735.png]]
+
+![Pasted image 20240420144735](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/6a585e2f-b6a2-4784-a033-96219c3f3313)
 
 Once signed in, we click `Products` -> `Free Trials & Downloads` and scroll down till we see `Universal Forwarder`. This is what we will use to send data to our `Splunk` server from our `Target PC` aka. windows 10 machine. 
-![[Pasted image 20240420145330.png]]
+
+![Pasted image 20240420145330](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/77b0d8b5-08ec-42cd-8a39-737c11cf1dbd)
 
 Click `Get My Free Download` and then on the OS that we are running, which will be the `Windows 10 - 64-bit` download.
-![[Pasted image 20240420150328.png]]
+
+![Pasted image 20240420150328](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/880a5394-e7ba-4cd1-91b5-0faa829559e7)
 
 Once the download is complete, we will open it up through the `Downloads` folder in `File Explorer`.
 
-![[Pasted image 20240420150635.png]]
+![Pasted image 20240420150635](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/cfb0047c-3180-4e68-96a3-07c5e82e2801)
 
 We will click the `Check this box to accept the License Agreement`. Make sure we have the `An on-premises Splunk Enterprise instance` picked and click `Next`.
 
-![[Pasted image 20240420150850.png]]
+![Pasted image 20240420150850](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/b25cdde8-b9d7-499d-ae42-c54b6933b75d)
 
 We will put `admin` as `Username:` and leave the `Generate random password` checked. Then click `Next`. 
 
-![[Pasted image 20240420151025.png]]
+![Pasted image 20240420151025](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/b9ee54a0-55c6-41de-9ff5-61cf7c7b0f2d)
 
 We do not have a deployment server so we will skip this and press `Next`.
 
-![[Pasted image 20240420151140.png]]
+![Pasted image 20240420151140](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/d802ae11-d0a5-4d1f-be1b-a2089805f517)
 
 The `Receiving Indexer` is going to be our `Splunk` server so we will put it's IP and put the `port`  as the default `9997` for receiving events.
 
-![[Pasted image 20240420151320.png]]
+![Pasted image 20240420151320](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/8eb64a27-0402-4cf1-854f-e78bd84186d3)
 
 We click `Install`. 
 
-![[Pasted image 20240420151508.png]]
+![Pasted image 20240420151508](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/87d2145d-7206-455c-ab3c-7cd57ac6a388)
 
 Now we are going to install `Sysmon` by going back to our web browser and searching `sysmon` and selecting the `sysmon` by `Sysinternals`. 
 
-![[Pasted image 20240420151740.png]]
+![Pasted image 20240420151740](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/639fa5c1-a137-4c7c-b75a-1434664b3bfa)
 
 We scroll down and click `Download Sysmon`. 
 
-![[Pasted image 20240420151837.png]]
+![Pasted image 20240420151837](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/617341be-962e-4760-b1a7-0bbca1e8bbe5)
 
 Now we need to get our Sysmon configuration, which will be the "sysmon olaf config." We will search that on our browser to find the github page.
 
@@ -359,11 +404,12 @@ Now we need to get our Sysmon configuration, which will be the "sysmon olaf conf
 
 Then we will scroll down till we see `sysmonconfig.xml` and click on it. 
 
-![[Pasted image 20240424141929.png]]
+![Pasted image 20240424141929](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/e0146876-21c3-4a12-8fc5-8b7ab272915c)
 
-We will then click the ![[Pasted image 20240424142110.png]] button on the right side of the page. Right-click `save as` and then save it within the `Downloads` directory.
+We will then click the ![Pasted image 20240424142110](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/3a5a3f42-62cf-4c90-8d95-dff1e8866c38)
+button on the right side of the page. Right-click `save as` and then save it within the `Downloads` directory.
 
-![[Pasted image 20240424142214.png]]
+![Pasted image 20240424142214](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/c2fbaced-f816-478e-b73f-fd04f46db55a)
 
 Now lets go to our `Downloads` directory. Right-click on our `sysmon` zipped folder and press `extract all`.
 
