@@ -44,6 +44,7 @@ sudo nano /etc/netplan/00-installer-config.yaml
 ![Pasted image 20240420024317](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/15412bf3-a93d-412b-9339-c4031bd2b773)
 
 We are then present with this 
+
 ![Pasted image 20240417204446](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/c39106bb-1314-4511-965e-51f2c9c8f3c2)
 
 
@@ -413,14 +414,15 @@ button on the right side of the page. Right-click `save as` and then save it wit
 
 Now lets go to our `Downloads` directory. Right-click on our `sysmon` zipped folder and press `extract all`.
 
-![[Pasted image 20240424142530.png]]
+![Pasted image 20240424142530](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/d7293858-f428-4615-8d32-18d446b7436b)
 
 `extract`.
-![[Pasted image 20240424142604.png]]
+
+![Pasted image 20240424142604](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/2f2a941c-9793-4ce4-84b8-00a851b8cd3e)
 
 We see the `sysmon` folder now and will click on the path bar and copy the file path. 
 
-![[Pasted image 20240424142812.png]]
+![Pasted image 20240424142812](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/32686248-68ca-454b-ab5b-01005b717428)
 
 We open `PowerShell` and `run as administrator`. We run the command below to change directories to our copied path. 
 Note: Your pathway will be different than mine unless you also named your user, "WINDAS".
@@ -439,37 +441,36 @@ The "-i" flag indicates that we want to specify on a configuration file. In whic
 
 The ".." indicates that we want to go back one directory since our config file was saved in the `Downloads` directory. 
 
-![[Pasted image 20240418004033.png]]
+![Pasted image 20240418004033](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/7add7e2e-fb4d-4a28-89cb-cf80e50543bf)
 
 We press enter and it begins to install. 
 
-![[Pasted image 20240418004233.png]]
+![Pasted image 20240418004233](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/5d38d03a-2201-4e13-8209-cb9f57742868)
 
 We press `Agree`
 
-![[Pasted image 20240424144001.png]]
+![Pasted image 20240424144001](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/f6c240a8-5441-4f70-8732-be1ae85c0a93)
 
 We also see that `Splunk Universal Forwarder` has also finished.
 
-![[Pasted image 20240424145314.png]]
-
+![Pasted image 20240424145314](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/698a72f5-3060-42b5-af94-0a6090384b57)
 
 #### Instruct Splunk Universal Forwarder (on Windows 10 AKA "Target-PC") on what we want to send to our Splunk Server. 
 ***
 
 We must configure a file named `inputs.conf`. Which if we open our `File Explorer` then we can locate it by going to `This PC` -> `Local Disk (C:)` -> `Program Files` -> `SplunkUniversalForwarder` -> `etc` -> `System` -> `default` and we see the file `inputs.conf`. We will leave it alone. 
 
-![[Pasted image 20240424150705.png]]
+![Pasted image 20240424150705](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/1e2a8b67-2fc4-4335-89fc-d61db5454fa8)
 
 We will go back a directory to `system` and go into `local` Here we will create a new `inputs.conf` file. 
 
 NOTE: it is VERY important that we DO NOT edit the `inputs.conf` file within the `default` directory. That one is there just in case we mess anything up and need to replace the file with the default one. 
 
-![[Pasted image 20240424151132.png]]
+![Pasted image 20240424151132](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/0969a6bc-56ea-485a-adc3-0e921a7bf101)
 
 However, we notice that we can only make folders within the directory and we want to create the `inputs.conf` file. So, instead we will open up `notepad` and create the file that way and save it within the `local` directory.
 
-![[Pasted image 20240424151543.png]]
+![Pasted image 20240424151543](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/8f9c84f6-2612-49be-9f88-9265464f3d16)
 
 So we open `notepad` and `run as administrator`. We copy the contents (below) of the original `inputs.conf` within the `default` directory and paste it into the notepad file.
 
@@ -507,75 +508,78 @@ This will tell our `Splunk Universal Forwarder` to push events related to `Appli
 
 NOTE: The `index = endpoint`. This means when these events occur they will be sent over to the `Splunk` Server and placed within the index `endpoint`. If our `Splunk` Server does not have an index named `endpoint`, then it will not receive any of these events. Therefore, we would have to create an index named `endpoint` to correct that. 
 
-![[Pasted image 20240424152924.png]]
+![Pasted image 20240424152924](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/24bad108-68fa-4d0e-82c5-de635baa896d)
 
 So, we save the notepad file under the `local` directory like we mentioned before, name it `inputs.conf`, change the "save as type:" to `All Files`, and hit `save`. 
 
-![[Pasted image 20240424153759.png]]
+![Pasted image 20240424153759](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/ae5f0606-c73a-4252-8b2a-8a31e74e04ac)
 
 Now we see `inputs.conf` under our `local` directory.
 
-![[Pasted image 20240424153926.png]]
+![Pasted image 20240424153926](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/41fd850c-2df1-48c8-b517-0747a93d230c)
 
 NOTE: Anytime we update the `inputs.conf` file we will need to restart `Splunk Universal Forwarder` service. 
 
 So, we will search up `Services` and `Run as administrator` 
 
-![[Pasted image 20240424154153.png]]
+![Pasted image 20240424154153](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/b61df06e-cd8d-432d-b4b6-74c03795818d)
 
 Click on any of the services once and type `s` to go to the services that start with "s." 
 
-![[Pasted image 20240424154334.png]]
+![Pasted image 20240424154334](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/f55bacd5-d72c-4d8c-9d97-0ec56ad7a8e4)
 
 We will look for the `SplunkForwarder` service.
 
-![[Pasted image 20240424154426.png]]
+![Pasted image 20240424154426](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/bf531a21-9d05-4f3f-ad34-50e07e50475c)
 
 If we scroll to the right of `SplunkForwarder` and look under the column `Log On As`, we might notice it says `NT SERVICE`. We DO NOT want this. 
 
-![[Pasted image 20240424154739.png]]
+![Pasted image 20240424154739](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/07008c87-6978-44de-ac45-1e48bffaa486)
 
 We will double click the service to view its `properties`.
 
-![[Pasted image 20240424154912.png]]
+![Pasted image 20240424154912](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/779082f6-978b-416a-8334-b75448feaefa)
 
 We will go to `Log On`. 
 
-![[Pasted image 20240424155010.png]]
+![Pasted image 20240424155010](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/91c78d1d-17f7-4dfa-b072-d2aebf551733)
 
 If we see `NT SERVICE` for "This account:" then it might not be able to collect logs due to permissions so instead we will click `Local System account` and hit `Apply`. 
 
-![[Pasted image 20240424155310.png]]
+![Pasted image 20240424155310](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/7984a1d5-150b-4355-abaf-4becde27993d)
 
 We see this message. This is fine since we planned on restarting the service anyways because we updated our `inputs.conf` file. 
 
-![[Pasted image 20240424155359.png]]
+![Pasted image 20240424155359](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/a57973e2-6414-493b-849c-b98887567810)
 
 Notice that it now says that `SplunkForwarder` under the `Log On As` is `Local System`. This is what we want. 
-![[Pasted image 20240424155546.png]]
+
+![Pasted image 20240424155546](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/481eb0ee-b7e2-40a7-b004-8055f5c5569a)
 
 We will also scroll down to the `Sysmon64` service and make sure it's running and the `Log On As` is also `Local System`.
 
-![[Pasted image 20240424155907.png]]
+![Pasted image 20240424155907](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/35f84907-3426-4225-9333-705a86966db7)
 
 We will go back to `SplunkForwarder` service. Right-click and press `Restart`. 
 
-![[Pasted image 20240424160029.png]]
+![Pasted image 20240424160029](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/4424648d-a303-4f09-8617-4f7a68b2e661)
 
 We wait. 
 
-![[Pasted image 20240424160052.png]]
+![Pasted image 20240424160052](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/b97fbc20-5e74-40ba-9a5d-3e37467519f7)
 
 We get this message but its ok. 
 
-![[Pasted image 20240424160159.png]]
+![Pasted image 20240424160159](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/7fcf166b-f85a-4047-9ebe-3dcc0791120e)
 
-We will press ![[Pasted image 20240424160228.png]] which is located on the left side. 
+We will press ![Pasted image 20240424160228](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/63b0f0cf-c6a2-4de9-a540-2eb417092891)
+ which is located on the left side. 
 
-![[Pasted image 20240424160312.png]]
+![Pasted image 20240424160312](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/b6a3ff82-34b3-4dd1-bc4e-98e4455a928f)
 
 and it will do its thing.
-![[Pasted image 20240424160342.png]]
+
+![Pasted image 20240424160342](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/b68e25ce-5694-46d0-bbbc-7d26b47e61dd)
 
 It is done. We now have finished our process for our updated `inputs.conf` file and will finalize our `Splunk` Server configurations. 
 
@@ -585,33 +589,33 @@ Let's head to our `Splunk` Server portal that we access through our web browser 
 
 NOTE: Make sure `Splunk` Server is powered on or else will not work. Also remember it listens on port 8000.
 
-![[Pasted image 20240424174142.png]]
+![Pasted image 20240424174142](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/8b1ed54f-a906-4064-a359-3661e8e5e858)
 
 Once we log in and get this to this screen, then we will go to `Settings` at the top and click `indexes`.
 
-![[Pasted image 20240424175622.png]]
+![Pasted image 20240424175622](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/125cd3c1-b1b2-48bf-bfe7-aac07992dd65)
 
-![[Pasted image 20240424175903.png]]
+![Pasted image 20240424175903](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/bc7178fc-1f1c-4b36-a287-8c9b44a45452)
 
 This is the `Indexes` page for `Splunk`. As we can see there are currently 15 indexes and if we scroll down, then we will notice there isn't an `endpoint` index. So, we will create one.
 
-![[Pasted image 20240424180355.png]]****
+![Pasted image 20240424180355](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/321287c9-b009-4805-8812-be50e9e0ba3a)
 
 At the top right of the page we will see a button that looks like this.
 
-![[Pasted image 20240424180602.png]]
+![Pasted image 20240424180602](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/5176052f-e5d3-4e9f-ac32-7e9528756dac)
 
 We will click that. We add the name `endpoint` to the "Index Name" and we click `Save`. 
 
-![[Pasted image 20240424180728.png]]
+![Pasted image 20240424180728](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/aec074a0-b7ab-451c-b5b4-a3bfb00d653d)
 
 Now we see the `enpoint` index on the list.
 
-![[Pasted image 20240424180849.png]]
+![Pasted image 20240424180849](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/dae436bc-d1e0-404e-9062-6480c3c14ad9)
 
 Now we must enable our `Splunk` Server to receive data. So, we will click on `Settings` again and go to `Forwarding and receiving` under `DATA`.
 
-![[Pasted image 20240424181332.png]]
+![Pasted image 20240424181332](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/a524405c-32aa-4c75-a327-5ac4a36bc4e1)
 
 Now we want to click on `Configure receiving` under `Receive data`.
 
