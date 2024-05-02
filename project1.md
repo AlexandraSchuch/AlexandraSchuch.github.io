@@ -967,7 +967,7 @@ So, we will change that to our `Domain Controller`'s address of `192.168.10.7`.
 
 It's important that we also click `OK` here as well or else it will not save. 
 
-![[Pasted image 20240425152559.png]]
+![Pasted image 20240425152559](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/b6cf5a05-c5ef-4c5a-ade0-cf15945bf558)
 
 We will open `Command Prompt` and make sure everything is correct by running the command 
 
@@ -976,7 +976,8 @@ Ipconfig /all
 ```
 
 In which, we do see now that our `DNS Servers` is `192.168.10.7`. 
-![[Pasted image 20240425152917.png]]
+
+![Pasted image 20240425152917](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/a09623f6-0c81-4794-a8fb-549ec73beaf7)
 
 Now we can add "Target-PC" AKA Windows 10 to our Domain without getting an error like before. 
 
@@ -984,49 +985,50 @@ So we go back to this and press `OK`.
 
 NOTE: Be sure to have your Active Directory Server AKA "ADDC01" powered on as well. 
 
-![[Pasted image 20240425153231.png]]
+![Pasted image 20240425153231](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/73694e9d-5153-46ed-8e59-ea40f6403cc2)
 
 We see this pop up.
 
-![[Pasted image 20240425153539.png]]
+![Pasted image 20240425153539](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/093ea43e-c0d8-4458-ad34-0005145bfaac)
 
 We will use the `Administrator` account of the Active Directory Server because it has the proper permissions to join the domain. 
 
-![[Pasted image 20240425153842.png]]
+![Pasted image 20240425153842](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/4dd8245c-e797-4ae0-864f-230938ddcf94)
 
 We get this and press `OK`.
 
 NOTE: In a real world environment we would create users and put them into a custom group that are authorized to allow computers to join the domain. 
 
-![[Pasted image 20240425154020.png]]
+![Pasted image 20240425154020](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/334790a9-a5d8-4ac7-8300-0cd23b366c69)
 
 We press `Ok` again
 
-![[Pasted image 20240425154207.png]]
+![Pasted image 20240425154207](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/8b770ea7-8b75-4c11-8b25-d5ac01808866)
 
 We `Restart Now`
 
-![[Pasted image 20240425154247.png]]
+![Pasted image 20240425154247](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/1ad3de7c-74ba-4253-83b1-4592cfb26ad9)
 
 Back on the log in screen. We want to log into our new user account that we made. For me, it was called "Sheldon.Plankton"
 
-![[Pasted image 20240425154419.png]]
+![Pasted image 20240425154419](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/fbcdfd20-eee7-479f-882e-0ab0158a2393)
 
 To do this, we will select `Other user` in the bottom left.
 
-![[Pasted image 20240425154625.png]]
+![Pasted image 20240425154625](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/542b3772-3ec4-4475-ae5d-ff19216be641)
 
 We want to make sure that we are signing into our domain. 
 
-![[Pasted image 20240425154828.png]]
+![Pasted image 20240425154828](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/a5be1c68-f8ed-4e65-9730-4e7af81e38e3)
 
 We fill out the login info for our user and sign in. 
 
-![[Pasted image 20240425154808.png]]
+
+![Pasted image 20240425154808](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/f978d1f8-7c07-40a4-b740-a41e2bc46ea7)
 
 It begins to log in
 
-![[Pasted image 20240425154924.png]]
+![Pasted image 20240425154924](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/a94e2a2e-4a19-4d2b-aaac-c712e49a52fa)
 
 
 #### Use Kali Linux to perform a brute force attack
