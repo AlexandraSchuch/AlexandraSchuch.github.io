@@ -324,6 +324,7 @@ Next, we want to search for `cmd` and see our current IP address by running the 
 ```Command Prompt
 ipconfig
 ```
+
 ![Pasted image 20240420142237](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/447bdccb-69fc-4867-892b-6f2fb27332be)
 
 Right now the Windows 10 machine is getting assigned a dynamic IPv4 address through DHCP and we need to change it to the static address `192.168.10.100` to match our network diagram. 
