@@ -619,37 +619,38 @@ Now we must enable our `Splunk` Server to receive data. So, we will click on `Se
 
 Now we want to click on `Configure receiving` under `Receive data`.
 
-![[Pasted image 20240424181432.png]]
+![Pasted image 20240424181432](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/331181c7-20dc-4a66-87db-d4efc7b9101a)
 
 We will click on the button that says `New Receiving Port`.
 
-![[Pasted image 20240424181606.png]]
+![Pasted image 20240424181606](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/e2eb3127-b8c1-43fb-b880-c14e40105ae4)
 
 We will configure the `9997` default port that we mentioned previously and click `Save`.
 
-![[Pasted image 20240424181748.png]]
+![Pasted image 20240424181748](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/4bd245ed-f4bc-4b51-9236-df617e1be766)
 
 If we have everything set up correctly, then we should start seeing data come in from our "Target PC" aka. Windows 10. 
 
 To check this, we will go to `Apps` in the top left corner and click `Search & Reporting`.
 
-![[Pasted image 20240424194649.png]]
+![Pasted image 20240424194649](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/0150df65-b399-4ca7-8845-44153a089159)
 
 We then search for our `endpoint` index
 
-![[Pasted image 20240424195729.png]]
+![Pasted image 20240424195729](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/2715ac01-5272-4d50-95ca-46637207f40f)
 
 We see 2,982 events in the last 24 hours and 1 host.
 
-![[Pasted image 20240424195910.png]]
+![Pasted image 20240424195910](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/623a834b-2c0d-44b2-9fae-bbbe382982bd)
+424195910.png]]
 
 If we look at `host` we see `Target-PC`. 
 
-![[Pasted image 20240424200707.png]]
+![Pasted image 20240424200707](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/3fba80f2-51b0-4b2f-a34e-42e5f886e1fe)
 
 If we look at `source` we see the 4 that we configured with the `inputs.conf` file.
 
-![[Pasted image 20240424200838.png]]
+![Pasted image 20240424200838](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/4460453a-4279-43b1-a12c-93eac702ee2b)
 
 #### Installing Splunk Universal Forwarder and Sysmon on Active Directory Server 2022 aka. "ADDC01"
 
@@ -657,28 +658,29 @@ We will follow the same exact steps as we did previously to install `Splunk Univ
 
 First things first, we will rename the "Active Directory Server" to "ADDC01" (Active Directory Domain Controller)
 
-![[Pasted image 20240424203534.png]]
+![Pasted image 20240424203534](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/d08ccd78-2571-491b-b962-2cd8d6e4dcec)
 
 We will also change the IP address to a static IP address. Specifically to `192.168.10.7` to match our diagram. 
 
-![[Pasted image 20240424203802.png]]
+![Pasted image 20240424203802](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/1d1d3534-c0dc-4d90-9870-a8b870d687dc)
 
 We see that we have connectivity and that our Active Directory Server can talk with our Splunk Server.
 
 NOTE: Active Directory Server CAN NOT ping our Windows 10 "Target-PC" because they are both Windows and ICMP (ping) is blocked by default by Windows Defender. We would have to create an inbound rule to allow pings. We see that the Active Directory Server can ping the Splunk Server so that's good enough to assume that we also are connected with the Windows 10 "Target-PC". 
-![[Pasted image 20240424204059.png]]
+
+![Pasted image 20240424204059](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/6605bb48-6d08-42d7-9fdd-a72547beab09)
 
 As we did previously on our Windows 10 "Target-PC", we will download `Splunk Universal Forwarder` onto our Active Directory Server "ADDC01". 
 
-![[Pasted image 20240425140110.png]]
+![Pasted image 20240425140110](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/4194bcef-d81e-4bd5-8238-b5ff4ee582be)
 
 We go through the same Setup process for the `Splunk Universal Forwarder` by setting our "Receiving Indexer" to our `Splunk Server`.
 
-![[Pasted image 20240425140341.png]]
+![Pasted image 20240425140341](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/6e8f9cf1-e1a5-4f92-8750-a4abdca34faf)
 
 We install `Sysmon` with the same "sysmonconfig.xml" configurations. 
 
-![[Pasted image 20240425140912.png]]
+![Pasted image 20240425140912](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/20f60cf3-a014-48c9-864d-ff4da060785a)
 
 
 #### Instruct Splunk Universal Forwarder (on Active Directory Server AKA "ADDC01") on what we want to send to our Splunk Server. 
@@ -687,11 +689,11 @@ We will follow the same exact steps as we did previously to instruct `Splunk Uni
 
 We made our new `inputs.conf` file in `notepad` and saved it within the `local` folder. 
 
-![[Pasted image 20240425143917.png]]
+![Pasted image 20240425143917](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/415238a0-b0e9-4b66-b4f5-6353c60fed2c)
 
 We restart the `SplunkForwarder` service.
 
-![[Pasted image 20240425144214.png]]
+![Pasted image 20240425144214](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/3f15ba8a-2303-4f82-9846-16b530573133)
 
 Now everything is done for the Active Directory Server AKA "ADDC01". 
 
@@ -701,7 +703,7 @@ We want to check that our "ADDC01" VM is showing up within the `host` section an
 
 We now see both our hosts that we set up to send data to our `Splunk` Server. 
 
-![[Pasted image 20240425145446.png]]
+![Pasted image 20240425145446](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/16f299b0-bc80-4da8-9905-9270c64f4d4b)
 
 
 #### Set up Active Directory as Domain Controller
@@ -709,58 +711,58 @@ We now see both our hosts that we set up to send data to our `Splunk` Server.
 
 Now we will head to our `Server Manager` Dashboard and click on `Manage` in the top right. 
 
-![[Pasted image 20240424204854.png]]
+![Pasted image 20240424204854](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/c1ecab55-eafd-473a-9eed-4e5a71e0c14d)
 
 Then `Add Roles and Features`
 
-![[Pasted image 20240424204928.png]]
+![Pasted image 20240424204928](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/bfa36c01-5497-4f1a-8b3d-0a95035ea31e)
 
 When we see this screen, we press `Next`.
 ![[Pasted image 20240424205017.png]]
 
 Make sure `Role-based or feature-based installation` is selected and press `Next`.
 
-![[Pasted image 20240424205158.png]]
+![Pasted image 20240424205158](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/c590a2db-8462-4f72-b8d7-15b18a0a11cf)
 
 Since we only have one server and it's already selected, we will press `Next` again. 
 
-![[Pasted image 20240424205319.png]]
+![Pasted image 20240424205319](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/3de31582-3d01-40ba-8867-ca2604c712d0)
 
 We then want to select `Active Directory Domain Services`.
 
-![[Pasted image 20240424205416.png]]
+![Pasted image 20240424205416](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/df1d66dc-74d1-421b-926e-15481d84c4f4)
 
 Select `Add Features`
 
-![[Pasted image 20240424205521.png]]
+![Pasted image 20240424205521](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/f5b14ec0-5a43-4241-8b8e-0d812681770e)
 
 We click `Next`.
 
-![[Pasted image 20240424205623.png]]
+![Pasted image 20240424205623](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/17ba2306-003e-43e9-ad37-aa7f256a2fee)
 
 `Next` again
 
-![[Pasted image 20240424205715.png]]
+![Pasted image 20240424205715](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/fd873e93-06ed-463a-8ce1-0ccdd3fac788)
 
 and again.
 
-![[Pasted image 20240424205741.png]]
+![Pasted image 20240424205741](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/b9388286-1c24-43b3-9561-5aa933ba8155)
 
 Finally, `Install`.
 
-![[Pasted image 20240424205828.png]]
+![Pasted image 20240424205828](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/f550b5ff-795d-4a57-8e33-d10532b4bcc2)
 
 We see the installation is done. 
 
-![[Pasted image 20240424210340.png]]
+![Pasted image 20240424210340](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/10807f6f-c8de-4a4a-95b9-d82e0c7ce3f9)
 
 We go back to `Server Manager` and see a yellow ! icon next to the `flag` icon. We click on that and then on `Promote this server to a domain controller`.
 
-![[Pasted image 20240424210513.png]]
+![Pasted image 20240424210513](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/10894a62-dd23-47ed-ac83-a02cf50664c5)
 
 A new screen opens up. We want to select `Add a new forest` because we are creating a brand new domain. 
 
-![[Pasted image 20240424210752.png]]
+![Pasted image 20240424210752](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/a03f0f18-ab5a-4cd6-8285-6041aa93379c)
 
 We also want to name the `Root domain name:`, for me I named mine "ChumBucket.local"
 
@@ -768,41 +770,41 @@ NOTE: The domain name must have a top level domain that is why we put ".local" i
 
 The ".local" could be anything such as ".test"
 
-![[Pasted image 20240424211036.png]]
+![Pasted image 20240424211036](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/55e6f242-6c73-4065-b9ec-ca6f48cf82a1)
 
 We then press `Next`.
 
-![[Pasted image 20240424211433.png]]
+![Pasted image 20240424211433](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/f38c9c4e-acff-4519-bf05-613347f57ff9)
 
 We create a `Password` and press `Next`.
 
-![[Pasted image 20240424211620.png]]
+![Pasted image 20240424211620](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/eeb1ef92-0de0-40bd-bf7c-6cb6c6f990bf)
 
 `Next`
 
-![[Pasted image 20240424211654.png]]
+![Pasted image 20240424211654](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/69c248b7-5c3e-4dd0-b2f9-c1fcea35a2d3)
 
 `Next`
 
-![[Pasted image 20240424211742.png]]
+![Pasted image 20240424211742](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/2fc0ea73-2390-4383-b396-f1b5f4562916)
 
 NOTE: These will be the paths used to store our database file named `NTDS.dit`, which is a file that attackers love to target because it contains everything related to Active Directory including password hashes. IF we notice any unauthorized activity towards this file then we can assume that our entire domain is sadly compromised. 
 
 We press `Next`.
 
-![[Pasted image 20240424211834.png]]
+![Pasted image 20240424211834](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/713b9d63-f8c9-420a-ba57-3ff2a69ffdbc)
 
 `Next`
 
-![[Pasted image 20240424212357.png]]
+![Pasted image 20240424212357](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/08de5be8-7bd5-4351-81ce-cc99d35b311d)
 
 `Install`
 
-![[Pasted image 20240424212442.png]]
+![Pasted image 20240424212442](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/65cda552-0b7c-4d50-8e69-6e29c018c379)
 
 We have to reset have this installation but when we go to log back in, we notice our domain followed by a \, which means that we have successfully installed `ADDS (Active Directory Domain Services)` and promoted our Active Directory Server to a `Domain Controller` 
 
-![[Pasted image 20240424213508.png]]
+![Pasted image 20240424213508](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/d4c4e7e9-1f9c-460e-ae90-9cc97721f585)
 
 
 #### Add Users to Domain
@@ -810,155 +812,158 @@ We have to reset have this installation but when we go to log back in, we notice
 
 Now we will log in and create some users. We will go to `Tools` in our `Server Manager` and then `Active Directory Users and Computers`.
 
-![[Pasted image 20240424213807.png]]
+![Pasted image 20240424213807](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/be8c13aa-15a9-4589-a466-c8a79f27565f)
 
 Here we can create objects such as users, computers, groups, etc. 
 
-![[Pasted image 20240424213918.png]]
+![Pasted image 20240424213918](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/80a30d6b-6dd1-423e-9b08-b2632fc48fb7)
 
 We will expand our Domain 
 
-![[Pasted image 20240424214033.png]]
+![Pasted image 20240424214033](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/3fb6192b-d4ab-4f0f-a120-301604a828d0)
 
 If we click `Builtin`, we see all of the groups Active Directory has automatically created on the hand side. We can double click any of these to find out more about them by reading the description. 
 
-![[Pasted image 20240424214141.png]]
+![Pasted image 20240424214141](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/0586a233-63f4-4363-b7e5-2c424bcf33b4)
 
 If we double click `Administrators` we can see the description. 
 
-![[Pasted image 20240424214357.png]]
+![Pasted image 20240424214357](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/ed24c624-2a98-4ce3-90d1-a1d1e82a49d4)
 
 If we click `members`, we can see who is assigned to this group. 
 
-![[Pasted image 20240424214614.png]]
+![Pasted image 20240424214614](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/dab2d9ea-7110-4b19-b774-32e5486d5d18)
 
 If we click `Member Of`, we can see what other groups this group is in.
 
 NOTE: CAN NOT add additional groups within a `Builtin` group but you can create a custom group and add that `Builtin` group to the custom group. 
-![[Pasted image 20240424214721.png]]
+
+![Pasted image 20240424214721](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/3c28c028-177e-4712-8bd1-ec97d35ec1a9)
 
 For example, if we go back to the groups and right-click on a blank space and go to `New` -> `Group`. 
 
-![[Pasted image 20240424215037.png]]
+![Pasted image 20240424215037](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/fcd8a948-c15f-4faa-863d-b5492fac9528)
 
 Type "Test" and `OK`
 
-![[Pasted image 20240424215258.png]]
+![Pasted image 20240424215258](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/dc2fc87b-f69f-4130-85e1-fc25041549e6)
 
 Double click `Test`
 
-![[Pasted image 20240424215351.png]]
+![Pasted image 20240424215351](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/f6965004-1b70-4c22-bc3c-ad8cbb0d12df)
 
 Click on `Member Of` and notice that we can now press `Add...` unlike before.
 
-![[Pasted image 20240424215438.png]]
+![Pasted image 20240424215438](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/82769d36-52ec-4db9-a96c-952cea58200b)
 
 If we click `Add...` then type "Administrators" in `Enter the object names to select` box and click `Check Names`. We notice "Administrators" gets underlined. We click `OK`. 
 
-![[Pasted image 20240424215553.png]]
+![Pasted image 20240424215553](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/ff9f0ad0-6c6c-475d-a2ce-995f0602665d)
 
 Now we see we made "Administrators" a `Member Of` the `Test` group. 
 
-![[Pasted image 20240424215808.png]]
+![Pasted image 20240424215808](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/b280c0ef-571f-4a69-814c-b0656e896fbc)
 
 Now we go to `Users`
 
-![[Pasted image 20240424221051.png]]
+![Pasted image 20240424221051](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/bfa6153a-595a-4609-a177-eae3e4c0ac07)
 
 We could make a user similar to the way we right clicked the empty space in the `Builtin` folder but usually users would be within different departments such as HR or IT. Departments in this context would be `Organizational Units`. 
 
 We can create a new `Organizational Unit` by right clicking the `Domain` -> `New` -> `Organizational Unit`.
 
-![[Pasted image 20240424221631.png]]
+![Pasted image 20240424221631](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/55458a32-245a-4020-8444-c40a4e9927bd)
 
 We will name this `IT` and click `OK`.
 
-![[Pasted image 20240424221716.png]]
+![Pasted image 20240424221716](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/dae936c6-9ba0-4bf8-8f21-39039cda0621)
 
 We see that `IT` is now a folder on the side.
 
-![[Pasted image 20240424221809.png]]
+![Pasted image 20240424221809](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/6273dbca-2d2a-4486-be75-7f9baa75d069)
 
 we can add users within it. 
 
-![[Pasted image 20240424221910.png]]
+![Pasted image 20240424221910](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/7d46a7ca-852f-4fee-b395-e27666ec8f7b)
 
 We will out our new User's `Name` and `User logon name`. We click `Next`.
 
-![[Pasted image 20240424222149.png]]
+
+![Pasted image 20240424222149](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/a736197d-cb8f-4eed-8e60-8f8a2f290f99)
 
 We give our user a new password and uncheck `User must change password at next logon` since we are within a lab environment. Click `Next`.
 
-![[Pasted image 20240424222247.png]]
+![Pasted image 20240424222247](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/068c28ba-7ce1-40f0-a555-e0d987caab81)
 
 `Finish`
 
-![[Pasted image 20240424222415.png]]
+![Pasted image 20240424222415](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/5eea47b8-72c1-422e-aacf-6d562f8c69e5)
 
 We see our new user in the `IT` folder.
 
-![[Pasted image 20240424222514.png]]
+![Pasted image 20240424222514](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/7b7734b6-efb0-4bd3-b291-30370e56f850)
 
 We will create another `Organizational Unit` named `HR` We create a new user within `HR`.
 
-![[Pasted image 20240424222731.png]]
+![Pasted image 20240424222731](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/2efbf59c-aea5-44b6-9465-dcaa3ebbbad5)
 
 #### Add Windows 10 AKA "Target-PC" to our Domain. 
 ***
 
 On our Windows 10 AKA "Target-PC" we want to search up `PC` -> `Properties`. 
 
-![[Pasted image 20240425150604.png]]
+![Pasted image 20240425150604](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/c93b3726-6497-42d4-9199-721fafd7591d)
 
 Scroll down and click on `Advanced system settings`.
 
-![[Pasted image 20240425150730.png]]
+![Pasted image 20240425150730](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/0f2ef0d8-ca4b-4bd3-a4b9-17260112cc44)
 
 We want to click on the tab `Computer Name`
 
-![[Pasted image 20240425150902.png]]
+![Pasted image 20240425150902](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/dd91ea00-bd42-4b44-8542-e25085e01f1a)
 
 Then on the `Change...` button. 
 
-![[Pasted image 20240425150927.png]]
+![Pasted image 20240425150927](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/060eca64-bb94-45af-ac7c-ed95a16462e0)
 
 We want to make sure we select `Domain:` 
 
-**![[Pasted image 20240425151007.png]]**
+![Pasted image 20240425151007](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/beed85a3-7ee2-4fb6-a94f-a578f98e9db8)
 
 We type in our `.local` Domain and press `OK`.
 
-![[Pasted image 20240425151206.png]]
+![Pasted image 20240425151206](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/fec47cb8-6485-43c5-af03-b145614d78c8)
 
 We see this error.
 
 This is because our "Target-PC" AKA Windows 10 doesn't know how to resolve the `.local` domain. So, we will fix that. 
 
-![[Pasted image 20240425151249.png]]
+![Pasted image 20240425151249](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/25144526-8a90-42d0-b1bf-e2c5cfc5655d)
 
 We will right-click our `Network Adapter` ![[Pasted image 20240425151619.png]] on the right hand side of the task bar and click `Open Network & Internet settings`.
 
-![[Pasted image 20240425151743.png]]
+![Pasted image 20240425151743](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/a45cacab-7a80-44d9-87a8-1e6af82447b3)
 
 We will click on `Change adapter options`
 
-![[Pasted image 20240425151831.png]]
+![Pasted image 20240425151831](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/a9215f7e-d7fa-4bd6-b053-f5d1b891c9b4)
 
 Right click our adapter and click `Properties`
 
-![[Pasted image 20240425151921.png]]
+![Pasted image 20240425151921](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/881283fc-01b2-4a42-8287-4ac15c34a485)
 
 Double click `Internet Protocol Version 4 (TCP/IPv4)`
 
-![[Pasted image 20240425152013.png]]
+![Pasted image 20240425152013](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/624f53ab-5ee9-45ab-a10b-41144979c718)
 
 We currently have our `Preferred DNS server:` pointing to Google's DNS and we want to change this to our `Domain Controller`. 
 
-![[Pasted image 20240425152113.png]]
+![Pasted image 20240425152113](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/dcd692d1-b115-44a8-b14c-1e240cec5332)
+0425152113.png]]
 
 So, we will change that to our `Domain Controller`'s address of `192.168.10.7`.
 
-![[Pasted image 20240425152435.png]]
+![Pasted image 20240425152435](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/7df1b138-96e1-40fa-a850-ee6f4d897300)
 
 It's important that we also click `OK` here as well or else it will not save. 
 
