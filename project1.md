@@ -1,6 +1,6 @@
 # Active Directory Project
 
-## Objective
+### Objective
 
 The Active Directory Lab project creates a controlled environment for simulating and detecting cyber attacks. The lab focuses on ingesting and analyzing logs within a Security Information and Event Management (SIEM) system, generating real-time traffic and test telemetry to mimic real-world attack scenarios. This is both a red and blue team project. This is because the project will both actively simulate a brute force attack and produce the logs to familiarize one's self with the detection and creation of alerts for these attacks on the network. This hands-on experience was designed to deepen the understanding of network security, attack patterns, and defensive strategies.
 
@@ -31,7 +31,7 @@ We will refer back to this diagram at any time during the project to avoid any c
 - [ ] Change all VM network's to NAT Network that you create to have all devices on same network with internet.
 - [ ] Make network diagram
 
-#### Setting up static IP address for Splunk Server
+### Setting up static IP address for Splunk Server
 ***
 As you can see our current IP address is `192.168.10.4` and we need to change that to match our diagram address of `192.168.10.10`
 
@@ -90,6 +90,7 @@ ping google.com
 
 
 ### Install Splunk on HOST machine.
+***
 
 We want to install `Splunk` on our HOST computer, so we will head over to `Splunk.com` on our browser through our HOST computer.
 
@@ -456,7 +457,7 @@ We also see that `Splunk Universal Forwarder` has also finished.
 
 ![Pasted image 20240424145314](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/698a72f5-3060-42b5-af94-0a6090384b57)
 
-#### Instruct Splunk Universal Forwarder (on Windows 10 AKA "Target-PC") on what we want to send to our Splunk Server. 
+### Instruct Splunk Universal Forwarder (on Windows 10 AKA "Target-PC") on what we want to send to our Splunk Server. 
 ***
 
 We must configure a file named `inputs.conf`. Which if we open our `File Explorer` then we can locate it by going to `This PC` -> `Local Disk (C:)` -> `Program Files` -> `SplunkUniversalForwarder` -> `etc` -> `System` -> `default` and we see the file `inputs.conf`. We will leave it alone. 
@@ -585,7 +586,7 @@ and it will do its thing.
 
 It is done. We now have finished our process for our updated `inputs.conf` file and will finalize our `Splunk` Server configurations. 
 
-#### Splunk Server configurations 
+### Splunk Server configurations 
 ***
 Let's head to our `Splunk` Server portal that we access through our web browser by entering `192.168.10.10:8000` into the address bar and logging in. 
 
@@ -654,7 +655,8 @@ If we look at `source` we see the 4 that we configured with the `inputs.conf` fi
 
 ![Pasted image 20240424200838](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/4460453a-4279-43b1-a12c-93eac702ee2b)
 
-#### Installing Splunk Universal Forwarder and Sysmon on Active Directory Server 2022 aka. "ADDC01"
+### Installing Splunk Universal Forwarder and Sysmon on Active Directory Server 2022 aka. "ADDC01"
+***
 
 We will follow the same exact steps as we did previously to install `Splunk Universal Forwarder` and `Sysmon` on our Windows 10 AKA "Target-PC" for our Active Directory Server AKA "ADDC01". I will show some of the steps but not as thorough as before.  Refer to this section to follow the detailed steps. [[#Installing Splunk Universal Forwarder and Sysmon on Windows 10 AKA "Target PC"]].
 
@@ -685,7 +687,7 @@ We install `Sysmon` with the same "sysmonconfig.xml" configurations.
 ![Pasted image 20240425140912](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/20f60cf3-a014-48c9-864d-ff4da060785a)
 
 
-#### Instruct Splunk Universal Forwarder (on Active Directory Server AKA "ADDC01") on what we want to send to our Splunk Server. 
+### Instruct Splunk Universal Forwarder (on Active Directory Server AKA "ADDC01") on what we want to send to our Splunk Server. 
 ***
 We will follow the same exact steps as we did previously to instruct `Splunk Universal Forwarder` on what we want to send to our `Splunk` Server on our Windows 10 AKA "Target-PC" for our Active Directory Server AKA "ADDC01". I will show some of the steps but not as thorough as before.  Refer to this section to follow the detailed steps. [[#Instruct Splunk Universal Forwarder (on Windows 10 AKA "Target-PC") on what we want to send to our Splunk Server.]]
 
@@ -809,7 +811,7 @@ We have to reset have this installation but when we go to log back in, we notice
 ![Pasted image 20240424213508](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/d4c4e7e9-1f9c-460e-ae90-9cc97721f585)
 
 
-#### Add Users to Domain
+### Add Users to Domain
 ***
 
 Now we will log in and create some users. We will go to `Tools` in our `Server Manager` and then `Active Directory Users and Computers`.
@@ -909,7 +911,7 @@ We will create another `Organizational Unit` named `HR` We create a new user wit
 
 ![Pasted image 20240424222731](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/2efbf59c-aea5-44b6-9465-dcaa3ebbbad5)
 
-#### Add Windows 10 AKA "Target-PC" to our Domain. 
+### Add Windows 10 AKA "Target-PC" to our Domain. 
 ***
 
 On our Windows 10 AKA "Target-PC" we want to search up `PC` -> `Properties`. 
@@ -1033,7 +1035,7 @@ It begins to log in
 ![Pasted image 20240425154924](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/a94e2a2e-4a19-4d2b-aaac-c712e49a52fa)
 
 
-#### Use Kali Linux to perform a brute force attack
+### Use Kali Linux to perform a brute force attack
 ***
 
 dd
@@ -1056,7 +1058,7 @@ dd
 
 
 
-#### Setting up Atomic Red Team on our Windows 10 AKA "Target-PC" to generate telemetry and view on Splunk. 
+### Setting up Atomic Red Team on our Windows 10 AKA "Target-PC" to generate telemetry and view on Splunk. 
 ***
 
 dd
