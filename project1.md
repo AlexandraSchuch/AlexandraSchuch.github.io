@@ -30,7 +30,7 @@ We will refer back to this diagram at any time during the project to avoid any c
 - [ ] Download all required VMs- Windows 10 (Target-PC), Windows Server (Active Directory), Kali Linux (Attacker), Ubuntu Server (Splunk)
 - [ ] Change all VM network's to NAT Network that you create to have all devices on same network with internet.
 - [ ] Make network diagram
-
+</br>
 
 
 ### Setting up static IP address for Splunk Server
