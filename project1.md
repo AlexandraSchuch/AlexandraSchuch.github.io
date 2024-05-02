@@ -475,7 +475,8 @@ However, we notice that we can only make folders within the directory and we wan
 
 So we open `notepad` and `run as administrator`. We copy the contents (below) of the original `inputs.conf` within the `default` directory and paste it into the notepad file.
 
-``` Copy this
+```CopyThis
+
 [WinEventLog://Application]
 
 index = endpoint
