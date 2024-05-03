@@ -404,7 +404,7 @@ We scroll down and click `Download Sysmon`.
 
 Now we need to get our Sysmon configuration, which will be the "sysmon olaf config." We will search that on our browser to find the github page.
 
-![[Pasted image 20240424141835.png]]
+![Pasted image 20240424141835](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/c7c09754-7d1a-42b8-a29f-5ebc5918ac7e)
 
 Then we will scroll down till we see `sysmonconfig.xml` and click on it. 
 
@@ -964,7 +964,6 @@ Double click `Internet Protocol Version 4 (TCP/IPv4)`
 We currently have our `Preferred DNS server:` pointing to Google's DNS and we want to change this to our `Domain Controller`. 
 
 ![Pasted image 20240425152113](https://github.com/AlexandraSchuch/alexandraschuch.github.io/assets/144488134/dcd692d1-b115-44a8-b14c-1e240cec5332)
-0425152113.png]]
 
 So, we will change that to our `Domain Controller`'s address of `192.168.10.7`.
 
